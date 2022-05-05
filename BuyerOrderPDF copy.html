@@ -258,11 +258,88 @@
             style="margin: auto; overflow-y: hidden; border: 1px solid black;" 
             >
             <tr>
+                <td> </td>
+                <td> </td>
                 <td>
                     <!-- Buyer Name START -->
                     <a class="invoices-pdf--block invoices-pdf-shipping--text invoices-pdf--black invoices-pdf--text invoices-pdf--text-left"></a>
                     <h3 style="text-align: left; font-size: 20px" class="invoices-pdf--block invoices-pdf--black">Payment Sumary</h3>
                     <a class="invoices-pdf--block invoices-pdf-shipping--text invoices-pdf--black invoices-pdf--text invoices-pdf--text-left"></a>
+                </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+            </table>
+            <table
+            class="invoices-pdf-table"
+            cellpadding="0"
+            cellspacing="0"
+            border="1"
+            width="650"
+            style="margin: auto; overflow-y: hidden; border: 1px solid black;" 
+            >
+            <tr>
+                <td>
+                    <!-- Buyer Name START -->
+                    <a class="invoices-pdf--block invoices-pdf-shipping--text invoices-pdf--black invoices-pdf--text invoices-pdf--text-left">
+                    <b>Subtotal Amount (USD)</b>
+                    </a>
+                </td>
+                <td></td>
+                <td>
+                    <a class="invoices-pdf--block invoices-pdf--text invoices-pdf--text-right invoices-pdf--black">
+                        Parent group's Invoice's Subtotal Amount:formatted as $1,028.58
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan=12>
+                    <a class="invoices-pdf--block invoices-pdf-shipping--text invoices-pdf--black invoices-pdf--text invoices-pdf--text-left"></a>
+                    <h3 style="text-align: left; font-size: 16px" class="invoices-pdf--block invoices-pdf--orange">Fees</h3>
+                    <table
+                        class="invoices-pdf__products-table"
+                        border="1"
+                        cellpadding="0"
+                        cellspacing="0"
+                        width="100%"
+                        style="margin: auto"
+                    >
+                        <tbody>
+                            <tr>
+                                <th class="invoices-pdf--text-left invoices-pdf--orange invoices-pdf__table-header">Name</th>
+                                <th class="invoices-pdf--text-right invoices-pdf--orange invoices-pdf__table-header">Total</th>
+                            </tr>
+                            <tr class="no-border">
+                                <td class="invoices-pdf--text-left invoices-pdf--text-pricing no-border invoices-pdf--black">This Fee's Name EN</td>
+                                <td class="invoices-pdf--text-right invoices-pdf--text-pricing no-border invoices-pdf--black">This Fee's Amount:formatted as $1,028.58</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="invoices-pdf--block invoices-pdf-shipping--text invoices-pdf--black invoices-pdf--text invoices-pdf--text-left"></a>
+                    <a class="invoices-pdf--block invoices-pdf-shipping--text invoices-pdf--black invoices-pdf--text invoices-pdf--text-left"></a>
+                    <a class="invoices-pdf--block invoices-pdf-shipping--text invoices-pdf--black invoices-pdf--text invoices-pdf--text-left">
+                    <b>Total Fees Amount (USD)</b>
+                    <a class="invoices-pdf--block invoices-pdf-shipping--text invoices-pdf--black invoices-pdf--text invoices-pdf--text-left"></a>
+                    <a class="invoices-pdf--block invoices-pdf-shipping--text invoices-pdf--black invoices-pdf--text invoices-pdf--text-left"></a>
+                    </a>
+                </td>
+                <td></td>
+                <td>
+                    <a class="invoices-pdf--block invoices-pdf-shipping--text invoices-pdf--black invoices-pdf--text invoices-pdf--text-left"></a>
+                    <a class="invoices-pdf--block invoices-pdf-shipping--text invoices-pdf--black invoices-pdf--text invoices-pdf--text-left"></a>
+                    <a class="invoices-pdf--block invoices-pdf--text invoices-pdf--text-right invoices-pdf--black">
+                        Parent group's Invoice's Credit Card Fee Amount + Parent group's Invoice's Fees:each item's Amount:sum:formatted as $1,028.58
+                    </a>
+                    <a class="invoices-pdf--block invoices-pdf-shipping--text invoices-pdf--black invoices-pdf--text invoices-pdf--text-left"></a>
+                    <a class="invoices-pdf--block invoices-pdf-shipping--text invoices-pdf--black invoices-pdf--text invoices-pdf--text-left"></a>
+                </td>
+            </tr>
+            <!-- <tr>
+                <td>
                     <a class="invoices-pdf--block invoices-pdf-shipping--text invoices-pdf--black invoices-pdf--text invoices-pdf--text-left">
                     <b>Subtotal Amount (USD)</b>
                     </a>
@@ -272,10 +349,10 @@
                 </td>
                 <td></td>
                 <td>
-                    <a class="invoices-pdf--block invoices-pdf-shipping--text invoices-pdf--black invoices-pdf--text invoices-pdf--text-left"></a>
-                    <a class="invoices-pdf--block invoices-pdf-shipping--text invoices-pdf--black invoices-pdf--text invoices-pdf--text-left"></a>
-                    <a class="invoices-pdf--block invoices-pdf-shipping--text invoices-pdf--black invoices-pdf--text invoices-pdf--text-left"></a>
-                    <a class="invoices-pdf--block invoices-pdf-shipping--text invoices-pdf--black invoices-pdf--text invoices-pdf--text-left"></a>
+                    <a class="invoices-pdf--block invoices-pdf-shipping--text invoices-pdf--black invoices-pdf--text invoices-pdf--text-left"> </a>
+                    <a class="invoices-pdf--block invoices-pdf-shipping--text invoices-pdf--black invoices-pdf--text invoices-pdf--text-left"> </a>
+                    <a class="invoices-pdf--block invoices-pdf-shipping--text invoices-pdf--black invoices-pdf--text invoices-pdf--text-left"> </a>
+                    <a class="invoices-pdf--block invoices-pdf-shipping--text invoices-pdf--black invoices-pdf--text invoices-pdf--text-left"> </a>
                     <a class="invoices-pdf--block invoices-pdf--text invoices-pdf--text-right invoices-pdf--black">
                         Parent group's Invoice's Subtotal Amount:formatted as $1,028.58
                     </a>
@@ -283,7 +360,7 @@
                         Parent group's Invoice's Credit Card Fee Amount + Parent group's Invoice's Fees:each item's Amount:sum:formatted as $1,028.58
                     </a>
                 </td>
-            </tr>
+            </tr> -->
             <tr>
                 <td></td>
                 <td></td>                             
