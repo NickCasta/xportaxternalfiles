@@ -1,0 +1,352 @@
+<style>
+    #buyer-quote {
+        overflow: hidden;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: scroll;
+    }
+
+    .quote-pdf-signature-main {
+        display: none;
+    }
+
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+    .quote-pdf-container>th,
+    .quote-pdf-container td,
+    .quote-pdf-container>tr,
+    .quote-pdf-container table {
+        border: unset !important;
+    }
+
+    * {
+        font-family: "Roboto", sans-serif;
+    }
+
+    /* MAIN Quote Container  */
+    .quote-pdf-container {
+        color: #ffffff;
+    }
+
+    /* Main Quote Table Container */
+    .quote-pdf-table {
+        border: unset !important;
+    }
+
+    /* Main Quote BODY */
+    .quote-pdf-table__body {
+        padding: 0;
+    }
+
+    .quote-pdf-table__header {
+        padding-bottom: 15px;
+    }
+
+    /* Header */
+    .quote-pdf-table__header td {
+        padding: 18px 0px;
+    }
+
+    .quote-pdf-table__header--logo {
+        display: inline-block;
+        width: 75px;
+    }
+
+    .quote-pdf-table__header--logo img {
+        display: inline-block;
+    }
+
+    /* img {
+        display: block;
+        margin: auto;
+        width: 218px; 
+        height: 58px;
+        align-self: stretch center;
+    } */
+
+    .center {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    /* Subheader */
+    tr.quote-pdf-table__subheader {
+        border: unset;
+    }
+
+    td.quote-pdf-table__subheader--name {
+        border: unset;
+    }
+
+    .quote-pdf-table__subheader--reference h3 {
+        text-align: right;
+    }
+
+    .quote-pdf-table__subheader--reference,
+    .quote-pdf-table__subheader--name {
+        padding: 20px 0;
+    }
+
+    .quote-pdf-table__actions {
+        padding: 20px 0;
+        display: none;
+    }
+
+    .quote-pdf-table__add-button {
+        background: #F58845;
+        color: white !important;
+        padding: 10px 30px;
+        border-radius: 6px;
+        margin-right: 10px;
+    }
+
+    .quote-pdf-table__view-button {
+        background: white;
+        border: 1px solid #F58845;
+        color: #F58845 !important;
+        padding: 10px 30px;
+        border-radius: 6px;
+        display: none;
+    }
+
+    /* Main Quote Utilities */
+    .quote-pdf--block {
+        display: block;
+    }
+
+    .quote-pdf--before {
+        page-break-before: always;
+    }
+
+    .quote-pdf--after {
+        page-break-after: always;
+    }
+
+    .quote-pdf--avoid {
+        page-break-inside: avoid;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a {
+        margin: unset;
+    }
+
+    h3 {
+        display: block;
+        font-size: 1.17em;
+        font-weight: bold;
+    }
+
+    .quote-pdf--bold {
+        font-weight: 900;
+    }
+
+    .quote-pdf--text {
+        padding-bottom: 10px;
+    }
+
+    .quote-pdf--text-right {
+        text-align: right;
+    }
+
+    .quote-pdf--text-left {
+        text-align: left;
+    }
+
+    .quote-pdf-description {
+        margin-top: 10px !important;
+        padding-bottom: 15px;
+    }
+
+    .quote-pdf__products-table {
+        margin-top: 10px !important;
+    }
+
+    .quote-pdf--orange {
+        color: #F58845 !important;
+    }
+
+    .quote-pdf--black {
+        color: #000000 !important;
+    }
+
+    .quote-pdf--text-pricing {
+        padding: 10px 0;
+    }
+
+    .no-border {
+        border: none;
+    }
+
+    table.quote-pdf__products-table {
+        border: none;
+    }
+
+    .quote-pdf__products-table tbody {
+        border: none;
+    }
+
+    .quote-pdf__products-table th {
+        padding: 10px 0px !important;
+        border: none;
+        font-weight: 900;
+    }
+
+    .quote-pdf__products-table tr {
+        border: none;
+    }
+
+    #show-pdf-buyer .quote-pdf-table__action {
+        display: block;
+    }
+
+    #show-pdf-buyer .quote-pdf-table__action a {
+        pointer-events: auto !important;
+    }
+
+
+    .quote-pdf-container a {
+        text-decoration: none !important;
+        color: black;
+        font-size: 16px;
+    }
+
+    .quote-pdf-container a {
+        pointer-events: none;
+    }
+
+    .quote-pdf_top-padding {
+        padding-top: 20px;
+    }
+
+    .quote-pdf_top-padding-20 {
+        padding-top: 15px;
+    }
+</style>
+
+<!-- Body Start -->
+
+<body>
+    <!-- TABLE START  -->
+    <div id="quote-pdf-container" class="quote-pdf-container">
+        <table class="quote-pdf-table" cellpadding="15" cellspacing="0" width="390"
+            style="margin: auto; overflow-y: hidden; border: 1px solid black;">
+            <!-- Table BODY START-->
+            <tbody class="quote-pdf-table__body">
+
+
+                <!-- Exporta Logo and Supplier Namer -->
+                
+                <!-- Table Header -->
+                <tr class="quote-pdf-table__header">
+                    <td style="align-self: stretch center;">
+                        <img alt="exporta logo"
+                            src="https://f.hubspotusercontent30.net/hubfs/7596986/01_Main%20Exporta%20Logo%20(2).png"
+                            style="width: 218px; height: 58px;"
+                            />
+                    </td>
+                </tr>
+                <!-- Table Header END -->
+
+
+                <!-- Table Header -->
+
+
+                <!-- Table Subheader START -->
+                <tr class="quote-pdf-table__subheader">
+                    <td class="quote-pdf-table__subheader--name">
+                        <h3 class="quote-pdf--black quote-pdf--supplier-name">Purchase Quote: Beani Hats</h3>
+                        <h4 class="quote-pdf--black quote-pdf--supplier-name">Greg Fish</h3>
+                        <a href="" class="quote-pdf--block quote-pdf-shipping--text quote-pdf--black quote-pdf--text">Hae Fish</a>
+                    </td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <!-- Buyer Name START -->
+                        <a href="" class="quote-pdf--block quote-pdf-shipping--text quote-pdf--black quote-pdf--text">
+                            Buyer's Name: Parent group's Quote's Var_RFQ's Var_Buyer_Company_General's
+                            Users:filtered:first item's Personal Info - First Name Parent group's Quote's Var_RFQ's
+                            Var_Buyer_Company_General's Users:filtered:first item's Personal Info - Last Name
+                        </a>
+                        <!-- Buyer Name END -->
+                        <div class="quote-pdf-table__actions">
+                            <a class="quote-pdf-table__add-button" href=""
+                                data-quote-id="Parent group's Quote's unique id">Add to order</a>
+                            <a class="quote-pdf-table__view-button"
+                                href="https://exporta.io/wholesale-rfq?RFQ_ID=Parent group's Quote's Var_RFQ's unique id">View
+                                RFQ</a>
+                        </div>
+                    </td>
+                    <td></td>
+                    <td>
+
+                        <a href="" class="quote-pdf--block quote-pdf--text quote-pdf--text-right quote-pdf--black">
+                            Creation Date: Parent group's Quote's Creation Date:formatted as 5/09/22
+                        </a>
+                        <a href="" class="quote-pdf--block quote-pdf--text quote-pdf--text-right quote-pdf--black">
+                            Expiration Date: Parent group's Quote's Quote_Expiration_Date:formatted as 5/09/22
+                        </a>
+                        <a href="" class="quote-pdf--block quote-pdf--text quote-pdf--text-right quote-pdf--black">
+                            Quote Created By: Parent group's Quote's Var_Supplier_Company's Company Name
+                        </a>
+                        <a href="" class="quote-pdf--block quote-pdf--text quote-pdf--text-right quote-pdf--black">
+                            Parent group's Quote's Quote_Samples_Or_Order's EN
+                        </a>
+                        <a href="" class="quote-pdf--block quote-pdf--text quote-pdf--text-right quote-pdf--black">
+                            Incoterm: Parent group's Quote's Quote_Incoterm_Name
+                        </a>
+                    </td>
+                </tr>
+
+                Parent group's Quote's Supplier_Conditions_EN is not empty:formatted as text
+
+
+                Parent group's Quote's Incoterms_List:count > 0:formatted as text
+
+                <!--Fees-->Parent group's Quote's Fees:filtered:count is 0:formatted as text
+                <!-- End FEES-->
+
+                <!--Other FEES -->
+                Parent group's Quote's Fees:filtered:count is 0:formatted as text
+                <!--Other FEES -->
+
+                <tr>
+                    <td></td>
+                    <td></td>
+
+                    <td colspan="12"
+                        class="quote-pdf--text-right quote-pdf--orange quote-pdf__table-header quote-pdf--bold">
+                        Total (USD): <span class="quote-pdf--black">Arbitrary text:converted to number - Arbitrary
+                            text:converted to number is 0:formatted as text</span>
+                    </td>
+                </tr>Parent group's Quote's Purchase_Terms is not empty:formatted as text
+
+                <tr class="quote-pdf-signature-main" style="padding-top: 20px;">
+                    <td width="auto">
+                        <div class="quote-pdf-signature"
+                            style="display: inline-block; margin-bottom: 5px; color: black;">Signature</div>
+
+                        <div class="quote-pdf-signature-container" style="border-bottom: 1px solid black;">
+                        </div>
+                        <div style="color: black !important;">
+                            <div class="quote-pdf-signature-name" style="display: inline-block; margin-top: 10px; ">Name
+                                here</div> Signature
+                        </div>
+                    </td>
+                    <td></td>
+                </tr>
+                <!-- Table Subheader END -->
+            </tbody>
+            <!-- Table BODY END -->
+        </table>
+    </div>
+    <!-- TABLE END -->
+</body>
+<!-- Body END -->
