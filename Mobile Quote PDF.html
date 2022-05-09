@@ -35,33 +35,30 @@
     /* Main Quote BODY */
     .quote-pdf-table__body {
         padding: 0;
+        width: 390;
     }
 
-    .quote-pdf-table__header {
-        padding-bottom: 15px;
+    .quote-pdf-table__header tr {
+        /* padding-bottom: 15px; */
+        align-items: center;
     }
 
     /* Header */
     .quote-pdf-table__header td {
         padding: 18px 0px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
     }
 
     .quote-pdf-table__header--logo {
         display: inline-block;
-        width: 75px;
+        align-self: stretch center;
     }
 
     .quote-pdf-table__header--logo img {
         display: inline-block;
     }
-
-    /* img {
-        display: block;
-        margin: auto;
-        width: 218px; 
-        height: 58px;
-        align-self: stretch center;
-    } */
 
     .center {
         text-align: center;
@@ -83,11 +80,11 @@
 
     .quote-pdf-table__subheader--reference,
     .quote-pdf-table__subheader--name {
-        padding: 20px 0;
+        padding: 10px 0;
     }
 
     .quote-pdf-table__actions {
-        padding: 20px 0;
+        padding: 10px 0;
         display: none;
     }
 
@@ -241,81 +238,133 @@
 
 
                 <!-- Exporta Logo and Supplier Namer -->
-                
+
                 <!-- Table Header -->
                 <tr class="quote-pdf-table__header">
-                    <td style="align-self: stretch center;">
+                    <td>
                         <img alt="exporta logo"
                             src="https://f.hubspotusercontent30.net/hubfs/7596986/01_Main%20Exporta%20Logo%20(2).png"
-                            style="width: 218px; height: 58px;"
-                            />
+                            style="width: 218px; height: 58px;" />
                     </td>
                 </tr>
                 <!-- Table Header END -->
 
-
-                <!-- Table Header -->
-
-
-                <!-- Table Subheader START -->
-                <tr class="quote-pdf-table__subheader">
-                    <td class="quote-pdf-table__subheader--name">
-                        <h3 class="quote-pdf--black quote-pdf--supplier-name">Purchase Quote: Beani Hats</h3>
-                        <h4 class="quote-pdf--black quote-pdf--supplier-name">Greg Fish</h3>
-                        <a href="" class="quote-pdf--block quote-pdf-shipping--text quote-pdf--black quote-pdf--text">Hae Fish</a>
+                <tr>
+                    <td>
+                        <!-- Purchase Quote START -->
+                        <h3 class="quote-pdf--black quote-pdf--supplier-name" style="size: 18px;">Purchase Quote: Quote Name</h3>
+                        <a href="" class="quote-pdf--block quote-pdf--black" style="size: 18px;"><b>Buyer's Company Name</b></a>
+                        <a href="" class="quote-pdf--block" style="size: 16px;">Buyer's first and last name</a>
+                        <a href="" class="quote-pdf--block" style="size: 16px;">Buyer's address</a>
+                        <!-- Purchase Quote END -->
                     </td>
                     <td></td>
                 </tr>
 
                 <tr>
                     <td>
-                        <!-- Buyer Name START -->
-                        <a href="" class="quote-pdf--block quote-pdf-shipping--text quote-pdf--black quote-pdf--text">
-                            Buyer's Name: Parent group's Quote's Var_RFQ's Var_Buyer_Company_General's
-                            Users:filtered:first item's Personal Info - First Name Parent group's Quote's Var_RFQ's
-                            Var_Buyer_Company_General's Users:filtered:first item's Personal Info - Last Name
-                        </a>
-                        <!-- Buyer Name END -->
-                        <div class="quote-pdf-table__actions">
-                            <a class="quote-pdf-table__add-button" href=""
-                                data-quote-id="Parent group's Quote's unique id">Add to order</a>
-                            <a class="quote-pdf-table__view-button"
-                                href="https://exporta.io/wholesale-rfq?RFQ_ID=Parent group's Quote's Var_RFQ's unique id">View
-                                RFQ</a>
-                        </div>
+                        <!-- Quote Details START -->
+                        <h3 class="quote-pdf--black quote-pdf--supplier-name" style="size: 18px;">Quote ID: ID Quote
+                        </h3>
+                        <a href="" class="quote-pdf--block quote-pdf--black" style="size: 18px;">Creation Date:
+                            03/21/2022</a>
+                        <a href="" class="quote-pdf--block quote-pdf--black" style="size: 18px;">Expiration Date:
+                            03/21/2022</a>
+                        <a href="" class="quote-pdf--block quote-pdf--black" style="size: 18px;">Order Type: Purchase
+                            Order</a>
+                        <a href="" class="quote-pdf--block quote-pdf--black" style="size: 18px;">Supplier Company:
+                            Company</a>
+                        <!-- Quote Details END -->
                     </td>
                     <td></td>
-                    <td>
-
-                        <a href="" class="quote-pdf--block quote-pdf--text quote-pdf--text-right quote-pdf--black">
-                            Creation Date: Parent group's Quote's Creation Date:formatted as 5/09/22
-                        </a>
-                        <a href="" class="quote-pdf--block quote-pdf--text quote-pdf--text-right quote-pdf--black">
-                            Expiration Date: Parent group's Quote's Quote_Expiration_Date:formatted as 5/09/22
-                        </a>
-                        <a href="" class="quote-pdf--block quote-pdf--text quote-pdf--text-right quote-pdf--black">
-                            Quote Created By: Parent group's Quote's Var_Supplier_Company's Company Name
-                        </a>
-                        <a href="" class="quote-pdf--block quote-pdf--text quote-pdf--text-right quote-pdf--black">
-                            Parent group's Quote's Quote_Samples_Or_Order's EN
-                        </a>
-                        <a href="" class="quote-pdf--block quote-pdf--text quote-pdf--text-right quote-pdf--black">
-                            Incoterm: Parent group's Quote's Quote_Incoterm_Name
-                        </a>
-                    </td>
                 </tr>
 
-                Parent group's Quote's Supplier_Conditions_EN is not empty:formatted as text
+                <tr>
+                    <td>
+                        <!-- Observations START -->
+                        <h3 class="quote-pdf--supplier-name quote-pdf--orange" style="size: 18px;">Observations</h3>
+                        <p style="width: 100%;">The fabric used for the products is subject to availability</p>
+                        <!-- Observations END -->
+                    </td>
+                </tr>
+                <tr>
+                    <!-- Quoted Products START -->
+                    <td colspan=12>
+                        <h3 class="quote-pdf--supplier-name quote-pdf--orange" style="size: 18px;">Quoted Producs</h3>
+                        <table class="quote-pdf__products-table" border="1" cellpadding="0" cellspacing="0" width="100%"
+                            style="margin: auto">
+                            <tbody>
+                                <tr>
+                                    <th class="quote-pdf--text-left quote-pdf--black quote-pdf__table-header">Product &
+                                        Description</th>
+                                    <th class="quote-pdf--text-right quote-pdf--black quote-pdf__table-header">Total
+                                    </th>
+                                </tr>
+                                <tr class="no-border">
+                                    <td class="quote-pdf--text-left quote-pdf--text-pricing no-border quote-pdf--black">
+                                        <p><b>Product name</b></p>
+                                        <p>Variation Quoted</p>
+                                        <p>Quantity quoted</p>
+                                        <p>Lead time</p>
+                                        <p>Unit price</p>
+                                    </td>
+                                    <td class="quote-pdf--text-right quote-pdf--text-pricing no-border quote-pdf--black"
+                                        style="font-style: italic !important;">$282</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <!-- Quoted Products END -->
+                </tr>
+                <tr>
+                    <!-- Subtotal START -->
+                    <td colspan=12>
+                        <table class="quote-pdf__products-table" border="1" cellpadding="0" cellspacing="0" width="100%"
+                            style="margin: auto">
+                            <tbody>
+                                <tr>
+                                    <th class="quote-pdf--text-left quote-pdf--orange quote-pdf__table-header">Subtotal</th>
+                                    <td class="quote-pdf--text-right quote-pdf--black quote-pdf__table-header">$1234</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3 class="quote-pdf--block quote-pdf--black" style="size: 18px;"> Other Fees</h3>
+                        <table class="quote-pdf__products-table" border="1" cellpadding="0" cellspacing="0" width="100%"
+                            style="margin: auto">
+                            <tbody>
+                                <tr>
+                                    <td class="quote-pdf--text-left quote-pdf--black">Fee Name</td>
+                                    <td class="quote-pdf--text-right quote-pdf--black">$3.24</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <!-- Subtotal END -->
+                </tr>
+                <tr>
+                    <!-- Total START -->
+                    <td colspan=12>
+                        <table class="quote-pdf__products-table" border="1" cellpadding="0" cellspacing="0" width="100%"
+                            style="margin: auto">
+                            <tbody>
+                                <tr>
+                                    <th class="quote-pdf--text-left quote-pdf--orange quote-pdf__table-header">Total</th>
+                                    <th class="quote-pdf--text-right quote-pdf--black quote-pdf__table-header">$1234</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <!-- Total END -->
+                </tr>
 
-
-                Parent group's Quote's Incoterms_List:count > 0:formatted as text
-
-                <!--Fees-->Parent group's Quote's Fees:filtered:count is 0:formatted as text
-                <!-- End FEES-->
-
-                <!--Other FEES -->
-                Parent group's Quote's Fees:filtered:count is 0:formatted as text
-                <!--Other FEES -->
+                <tr>
+                    <td>
+                        <!-- Observations START -->
+                        <h3 class="quote-pdf--supplier-name quote-pdf--orange" style="size: 18px;">Terms and Conditions</h3>
+                        <p style="width: 100%;">The fabric used for the products is subject to availability</p>
+                        <!-- Observations END -->
+                    </td>
+                </tr>
 
                 <tr>
                     <td></td>
@@ -326,7 +375,8 @@
                         Total (USD): <span class="quote-pdf--black">Arbitrary text:converted to number - Arbitrary
                             text:converted to number is 0:formatted as text</span>
                     </td>
-                </tr>Parent group's Quote's Purchase_Terms is not empty:formatted as text
+                </tr>
+                <!--Parent group's Quote's Purchase_Terms is not empty:formatted as text -->
 
                 <tr class="quote-pdf-signature-main" style="padding-top: 20px;">
                     <td width="auto">
