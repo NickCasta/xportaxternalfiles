@@ -40,7 +40,7 @@
 
     .quote-pdf-table__header tr {
         /* padding-bottom: 15px; */
-        align-items: center;
+        align-self: center;
     }
 
     /* Header */
@@ -161,7 +161,7 @@
     }
 
     .quote-pdf__products-table {
-        margin-top: 10px !important;
+        margin-top: 0px !important;
     }
 
     .quote-pdf--orange {
@@ -174,6 +174,10 @@
 
     .quote-pdf--text-pricing {
         padding: 10px 0;
+    }
+
+    .table-border{
+        border-top: 1px solid #6f6f6f;
     }
 
     .no-border {
@@ -189,7 +193,7 @@
     }
 
     .quote-pdf__products-table th {
-        padding: 10px 0px !important;
+        padding: 0px 0px !important;
         border: none;
         font-weight: 900;
     }
@@ -224,6 +228,10 @@
     .quote-pdf_top-padding-20 {
         padding-top: 15px;
     }
+    span {
+        background-color: #022c6450;
+        border-radius: 10%;
+    }
 </style>
 
 <!-- Body Start -->
@@ -241,54 +249,57 @@
 
                 <!-- Table Header -->
                 <tr class="quote-pdf-table__header">
-                    <td>
+                    <td style="width: 100%;">
                         <img alt="exporta logo"
                             src="https://f.hubspotusercontent30.net/hubfs/7596986/01_Main%20Exporta%20Logo%20(2).png"
                             style="width: 218px; height: 58px;" />
                     </td>
                 </tr>
                 <!-- Table Header END -->
-
+                
+                <!-- Purchase Quote START -->
                 <tr>
                     <td>
-                        <!-- Purchase Quote START -->
-                        <h3 class="quote-pdf--black quote-pdf--supplier-name" style="size: 18px;">Purchase Quote: Quote Name</h3>
-                        <a href="" class="quote-pdf--block quote-pdf--black" style="size: 18px;"><b>Buyer's Company Name</b></a>
+                        
+                        <h3 class="quote-pdf--black quote-pdf--supplier-name" style="size: 18px;">Purchase Quote: Quote
+                            Name</h3>
+                        <a href="" class="quote-pdf--block quote-pdf--black" style="size: 18px;"><b>Buyer's Company
+                                Name</b></a>
                         <a href="" class="quote-pdf--block" style="size: 16px;">Buyer's first and last name</a>
                         <a href="" class="quote-pdf--block" style="size: 16px;">Buyer's address</a>
-                        <!-- Purchase Quote END -->
                     </td>
                     <td></td>
                 </tr>
-
+                <!-- Purchase Quote END -->
+                
+                <!-- Quote Details START -->
                 <tr>
                     <td>
-                        <!-- Quote Details START -->
                         <h3 class="quote-pdf--black quote-pdf--supplier-name" style="size: 18px;">Quote ID: ID Quote
                         </h3>
                         <a href="" class="quote-pdf--block quote-pdf--black" style="size: 18px;">Creation Date:
                             03/21/2022</a>
                         <a href="" class="quote-pdf--block quote-pdf--black" style="size: 18px;">Expiration Date:
                             03/21/2022</a>
-                        <a href="" class="quote-pdf--block quote-pdf--black" style="size: 18px;">Order Type: Purchase
-                            Order</a>
+                        <a href="" class="quote-pdf--block quote-pdf--black" style="size: 18px;">Order Type: <span><b style="color: #ffffff;">Purchase Order</b></span></a>
                         <a href="" class="quote-pdf--block quote-pdf--black" style="size: 18px;">Supplier Company:
                             Company</a>
-                        <!-- Quote Details END -->
                     </td>
                     <td></td>
                 </tr>
+                <!-- Quote Details END -->
 
+                <!-- Observations START -->
                 <tr>
-                    <td>
-                        <!-- Observations START -->
+                    <td colspan="12">
                         <h3 class="quote-pdf--supplier-name quote-pdf--orange" style="size: 18px;">Observations</h3>
                         <p style="width: 100%;">The fabric used for the products is subject to availability</p>
-                        <!-- Observations END -->
                     </td>
                 </tr>
+                <!-- Observations END -->
+
+                <!-- Quoted Products START -->
                 <tr>
-                    <!-- Quoted Products START -->
                     <td colspan=12>
                         <h3 class="quote-pdf--supplier-name quote-pdf--orange" style="size: 18px;">Quoted Producs</h3>
                         <table class="quote-pdf__products-table" border="1" cellpadding="0" cellspacing="0" width="100%"
@@ -314,21 +325,25 @@
                             </tbody>
                         </table>
                     </td>
-                    <!-- Quoted Products END -->
                 </tr>
+                <!-- Quoted Products END -->
+
+                <!-- Subtotal START -->
                 <tr>
-                    <!-- Subtotal START -->
                     <td colspan=12>
-                        <table class="quote-pdf__products-table" border="1" cellpadding="0" cellspacing="0" width="100%"
+                        <table class="quote-pdf__products-table table-border" cellpadding="0" cellspacing="0" width="100%"
                             style="margin: auto">
                             <tbody>
                                 <tr>
-                                    <th class="quote-pdf--text-left quote-pdf--orange quote-pdf__table-header">Subtotal</th>
-                                    <td class="quote-pdf--text-right quote-pdf--black quote-pdf__table-header">$1234</td>
+                                    <hr style="width:100%;text-align:left;margin-left:0; background-color: #6f6f6f;">
+                                    <th class="quote-pdf--text-left quote-pdf--orange quote-pdf__table-header">Subtotal
+                                    </th>
+                                    <td class="quote-pdf--text-right quote-pdf--black quote-pdf__table-header">$1234
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
-                        <h3 class="quote-pdf--block quote-pdf--black" style="size: 18px;"> Other Fees</h3>
+                        <h3 class="quote-pdf--block quote-pdf--black" style="size: 18px; padding-top: 10px;"> Other Fees</h3>
                         <table class="quote-pdf__products-table" border="1" cellpadding="0" cellspacing="0" width="100%"
                             style="margin: auto">
                             <tbody>
@@ -339,56 +354,116 @@
                             </tbody>
                         </table>
                     </td>
-                    <!-- Subtotal END -->
                 </tr>
+                <!-- Subtotal END -->
+                
+                <!-- Total START -->
                 <tr>
-                    <!-- Total START -->
                     <td colspan=12>
                         <table class="quote-pdf__products-table" border="1" cellpadding="0" cellspacing="0" width="100%"
                             style="margin: auto">
                             <tbody>
                                 <tr>
-                                    <th class="quote-pdf--text-left quote-pdf--orange quote-pdf__table-header">Total</th>
-                                    <th class="quote-pdf--text-right quote-pdf--black quote-pdf__table-header">$1234</th>
+                                    <hr style="width:100%;text-align:left;margin-left:0; background-color: #6f6f6f;">
+                                    <th class="quote-pdf--text-left quote-pdf--orange quote-pdf__table-header">Total
+                                    </th>
+                                    <th class="quote-pdf--text-right quote-pdf--black quote-pdf__table-header">$1234
+                                    </th>
                                 </tr>
                             </tbody>
                         </table>
                     </td>
-                    <!-- Total END -->
                 </tr>
+                <!-- Total END -->
+
+                <!-- Terms and Conditions START -->
+                <tr>
+                    <td colspan="12">
+                        <h3 class="quote-pdf--supplier-name quote-pdf--orange" style="size: 18px;">Terms and Conditions</h3>
+                        <p style="width: 100%;">50% of product and 100% of shipping due</p>
+                    </td>
+                </tr>
+                <!-- Terms and Conditions END -->
+
+                <!-- Shipment Configuration START -->
+                <tr>
+                    <td colspan=12>
+                        <h3 class="quote-pdf--supplier-name quote-pdf--orange" style="size: 18px;">Shipment
+                            Configuration</h3>
+                        <table class="quote-pdf__products-table" border="1" cellpadding="20" cellspacing="0" width="100%"
+                            style="margin: auto">
+                            <tbody>
+                                <tr>
+                                    <th class="quote-pdf--text-left quote-pdf--black quote-pdf-table__header"
+                                        width=60%">Type of Packaging: </th>
+                                    <td
+                                        class="quote-pdf--text-left quote-pdf--text-pricing no-border quote-pdf--black">
+                                        Boxes</td>
+                                </tr>
+                                <tr>
+                                    <th class="quote-pdf--text-left quote-pdf--black quote-pdf-table__header"
+                                        width=60%">N° of total units: </th>
+                                    <td
+                                        class="quote-pdf--text-left quote-pdf--text-pricing no-border quote-pdf--black">
+                                        2</td>
+                                </tr>
+                                <tr>
+                                    <th class="quote-pdf--text-left quote-pdf--black quote-pdf-table__header"
+                                        width=60%">Total Weight </th>
+                                    <td
+                                        class="quote-pdf--text-left quote-pdf--text-pricing no-border quote-pdf--black">
+                                        200 kg</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="quote-pdf__products-table" border="1" cellpadding="20" cellspacing="0" width="100%"
+                            style="margin: auto">
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td class="quote-pdf--text-left quote-pdf--black quote-pdf-table__header"><b>Dimensions</b></td>
+                                    <td class="quote-pdf--text-left quote-pdf--text-pricing no-border quote-pdf--black">
+                                        <b>Weight</b></td>
+                                </tr>
+                                <tr>
+                                    <td class="quote-pdf--text-left quote-pdf--black quote-pdf-table__header" width="35%"><b>Box #1</b></td>
+                                    <td class="quote-pdf--text-left quote-pdf--text-pricing no-border quote-pdf--black">50 x 50 x 50 cm</td>
+                                    <td class="quote-pdf--text-left quote-pdf--text-pricing no-border quote-pdf--black">200 kg</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Shipment Configuration END -->
+
+                <!-- Buyer Company/Name START -->
+                <tr>
+                    <td colspan=12>
+                        <table class="quote-pdf__products-table" border="1" cellpadding="20" cellspacing="0" width="100%"
+                            style="margin: auto">
+                            <tbody>
+                                <hr style="width:50%; text-align:right ;margin-right:0; height: 1px; background-color: #000000;">
+                                <tr>
+                                    <th class="quote-pdf--text-right quote-pdf--black quote-pdf-table__header"
+                                        width=60%">Greg Fish </th>
+                                </tr>
+                                <tr>
+                                    <td class="quote-pdf--text-right quote-pdf--text-pricing no-border quote-pdf--black">
+                                        Hae Fish</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Buyer Company/Name END -->
 
                 <tr>
                     <td>
-                        <!-- Observations START -->
-                        <h3 class="quote-pdf--supplier-name quote-pdf--orange" style="size: 18px;">Terms and Conditions</h3>
-                        <p style="width: 100%;">The fabric used for the products is subject to availability</p>
-                        <!-- Observations END -->
-                    </td>
-                </tr>
-
-                <tr>
-                    <td></td>
-                    <td></td>
-
-                    <td colspan="12"
-                        class="quote-pdf--text-right quote-pdf--orange quote-pdf__table-header quote-pdf--bold">
-                        Total (USD): <span class="quote-pdf--black">Arbitrary text:converted to number - Arbitrary
-                            text:converted to number is 0:formatted as text</span>
-                    </td>
-                </tr>
-                <!--Parent group's Quote's Purchase_Terms is not empty:formatted as text -->
-
-                <tr class="quote-pdf-signature-main" style="padding-top: 20px;">
-                    <td width="auto">
-                        <div class="quote-pdf-signature"
-                            style="display: inline-block; margin-bottom: 5px; color: black;">Signature</div>
-
-                        <div class="quote-pdf-signature-container" style="border-bottom: 1px solid black;">
-                        </div>
-                        <div style="color: black !important;">
-                            <div class="quote-pdf-signature-name" style="display: inline-block; margin-top: 10px; ">Name
-                                here</div> Signature
-                        </div>
+                        <h3 class="quote-pdf--orange quote-pdf--supplier-name" style="size: 18px;">Questions? Contact me</h3>
+                        <a href="" class="quote-pdf--block quote-pdf--black" style="size: 18px;">Jarryd Lentini</a>
+                        <a href="" class="quote-pdf--block" style="size: 16px;">Sales Manager</a>
+                        <a href="" class="quote-pdf--block" style="size: 16px;">jarryd.lentini@exporta.io</a>
+                        <a href="" class="quote-pdf--block" style="size: 16px;">Exporta Technologies</a>
                     </td>
                     <td></td>
                 </tr>
