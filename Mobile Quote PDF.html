@@ -37,7 +37,37 @@
         padding: 0;
         width: 390;
     }
+    
+    @media screen and (max-width: 428px) {
+        .quote-pdf-table__body{
+        width: 388px;
+        }
+    }
 
+    @media screen and (max-width: 414px) {
+        .quote-pdf-table__body{
+        width: 374px;
+        }
+    }
+
+    @media screen and (max-width: 390px) {
+        .quote-pdf-table__body{
+        width: 350px;
+        }
+    }
+    
+    @media screen and (max-width: 375px) {
+        .quote-pdf-table__body{
+        width: 335px;
+        }
+    }
+    
+    @media screen and (max-width: 360px) {
+        .quote-pdf-table__body{
+        width: 320px;
+        }
+    }
+    
     .quote-pdf-table__header tr {
         /* padding-bottom: 15px; */
         align-self: center;
@@ -261,9 +291,8 @@
                 <!-- Table Header END -->
                 
                 <!-- Purchase Quote START -->
-                <tr>
+                <tr >
                     <td>
-                        
                         <h3 class="quote-pdf--black quote-pdf--supplier-name" style="size: 18px;">Purchase Quote: Quote
                             Name</h3>
                         <a href="" class="quote-pdf--block quote-pdf--black" style="size: 18px;"><b>Buyer's Company
@@ -327,13 +356,6 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </td>
-                </tr>
-                <!-- Quoted Products END -->
-
-                <!-- Subtotal START -->
-                <tr>
-                    <td colspan=12>
                         <table class="quote-pdf__products-table table-border" cellpadding="0" cellspacing="0" width="100%"
                             style="margin: auto">
                             <tbody>
@@ -346,6 +368,13 @@
                                 </tr>
                             </tbody>
                         </table>
+                    </td>
+                </tr>
+                <!-- Quoted Products END -->
+
+                <!-- Subtotal START -->
+                <tr>
+                    <td colspan=12 style="padding-top: 0px;">
                         <h4 class="quote-pdf--block quote-pdf--black" style="size: 18px; padding-top: 10px;padding-bottom: 10px;"> Other Fees</h4>
                         <table class="quote-pdf__products-table" border="1" cellpadding="0" cellspacing="0" width="100%"
                             style="margin: auto">
@@ -396,7 +425,7 @@
                         <table class="quote-pdf__products-table" border="1" cellpadding="20" cellspacing="0" width="100%"
                             style="margin: auto">
                             <tbody>
-                                <!-- <tr>
+                                <tr>
                                     <th class="quote-pdf--text-left quote-pdf--black quote-pdf-table__header"
                                         width=70%">Type of Packaging: </th>
                                     <td
@@ -409,7 +438,7 @@
                                     <td
                                         class="quote-pdf--text-left quote-pdf--text-pricing no-border quote-pdf--black">
                                         2</td>
-                                </tr> -->
+                                </tr>
                                 <tr>
                                     <th class="quote-pdf--text-left quote-pdf--black quote-pdf-table__header"
                                         width=70%">Total Weight </th>
