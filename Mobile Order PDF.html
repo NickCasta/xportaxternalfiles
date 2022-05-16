@@ -1,0 +1,432 @@
+<style>
+    #html-scrolling .bubble-r-box{
+        margin-left: auto;
+        margin-right: auto;
+        right: 0px !important;
+    }
+    #buyer-quote {
+        overflow: hidden;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: scroll;
+    }
+
+    .quote-pdf-signature-main {
+        display: none;
+    }
+
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+    .quote-pdf-container>th,
+    .quote-pdf-container td,
+    .quote-pdf-container>tr,
+    .quote-pdf-container table {
+        border: unset !important;
+    }
+
+    * {
+        font-family: "Roboto", sans-serif;
+    }
+
+    /* MAIN Quote Container  */
+    .quote-pdf-container {
+        color: #ffffff;
+    }
+
+    /* Main Quote Table Container */
+    .quote-pdf-table {
+        border: unset !important;
+    }
+
+    /* Main Quote BODY */
+    .quote-pdf-table__body {
+        padding: 0;
+        width: 390;
+    }
+    
+    @media screen and (max-width: 428px) {
+        .quote-pdf-table__body{
+        width: 388px;
+        }
+    }
+
+    @media screen and (max-width: 414px) {
+        .quote-pdf-table__body{
+        width: 374px;
+        }
+    }
+
+    @media screen and (max-width: 390px) {
+        .quote-pdf-table__body{
+        width: 350px;
+        }
+    }
+    
+    @media screen and (max-width: 375px) {
+        .quote-pdf-table__body{
+        width: 335px;
+        }
+    }
+    
+    @media screen and (max-width: 360px) {
+        .quote-pdf-table__body{
+        width: 320px;
+        }
+    }
+    
+    .quote-pdf-table__header tr {
+        /* padding-bottom: 15px; */
+        align-self: center;
+    }
+
+    /* Header */
+    .quote-pdf-table__header td {
+        padding: 18px 0px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .quote-pdf-table__header--logo {
+        display: inline-block;
+        align-self: stretch center;
+    }
+
+    .quote-pdf-table__header--logo img {
+        display: inline-block;
+    }
+
+    .center {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    /* Subheader */
+    tr.quote-pdf-table__subheader {
+        border: unset;
+    }
+
+    td.quote-pdf-table__subheader--name {
+        border: unset;
+    }
+
+    .quote-pdf-table__subheader--reference h3 {
+        text-align: right;
+    }
+
+    .quote-pdf-table__subheader--reference,
+    .quote-pdf-table__subheader--name {
+        padding: 10px 0;
+    }
+
+    .quote-pdf-table__actions {
+        padding: 10px 0;
+        display: none;
+    }
+
+    .quote-pdf-table__add-button {
+        background: #F58845;
+        color: white !important;
+        padding: 10px 30px;
+        border-radius: 6px;
+        margin-right: 10px;
+    }
+
+    .quote-pdf-table__view-button {
+        background: white;
+        border: 1px solid #F58845;
+        color: #F58845 !important;
+        padding: 10px 30px;
+        border-radius: 6px;
+        display: none;
+    }
+
+    /* Main Quote Utilities */
+    .quote-pdf--block {
+        display: block;
+    }
+
+    .quote-pdf--before {
+        page-break-before: always;
+    }
+
+    .quote-pdf--after {
+        page-break-after: always;
+    }
+
+    .quote-pdf--avoid {
+        page-break-inside: avoid;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a {
+        margin: unset;
+    }
+
+    h3 {
+        display: block;
+        font-size: 1.17em;
+        font-weight: bold;
+    }
+
+    .quote-pdf--bold {
+        font-weight: 900;
+    }
+
+    .quote-pdf--text {
+        padding-bottom: 10px;
+    }
+
+    .quote-pdf--text-right {
+        text-align: right;
+    }
+
+    .quote-pdf--text-left {
+        text-align: left;
+    }
+
+    .quote-pdf-description {
+        margin-top: 10px !important;
+        padding-bottom: 15px;
+    }
+
+    .quote-pdf__products-table {
+        margin-top: 10px !important;
+    }
+
+    .quote-pdf--orange {
+        color: #F58845 !important;
+    }
+
+    .quote-pdf--black {
+        color: #000000 !important;
+    }
+
+    .quote-pdf--text-pricing {
+        padding: 10px 0;
+    }
+
+    .table-border{
+        border-top: 1px solid #6f6f6f;
+    }
+
+    .no-border {
+        border: none;
+    }
+
+    table.quote-pdf__products-table {
+        border: none;
+    }
+
+    .quote-pdf__products-table tbody {
+        border: none;
+    }
+
+    .quote-pdf__products-table th {
+        padding: 10px 0px !important;
+        border: none;
+        font-weight: 900;
+    }
+
+    .quote-pdf__products-table tr {
+        border: none;
+    }
+
+    #show-pdf-buyer .quote-pdf-table__action {
+        display: block;
+    }
+
+    #show-pdf-buyer .quote-pdf-table__action a {
+        pointer-events: auto !important;
+    }
+
+
+    .quote-pdf-container a {
+        text-decoration: none !important;
+        color: black;
+        font-size: 16px;
+    }
+
+    .quote-pdf-container a {
+        pointer-events: none;
+    }
+
+    .quote-pdf_top-padding {
+        padding-top: 20px;
+    }
+
+    .quote-pdf_top-padding-20 {
+        padding-top: 15px;
+    }
+    span {
+        border-radius: 10%;
+    }
+
+    p {
+        color: #000000;
+    }
+</style>
+
+<!-- Body Start -->
+
+<body>
+    <!-- TABLE START  -->
+    <div id="quote-pdf-container" class="quote-pdf-container">
+        <table class="quote-pdf-table" cellpadding="15" cellspacing="0" width="320"
+            style="margin: auto; overflow-y: hidden; border: 1px solid black;">
+            <!-- Table BODY START-->
+            <tbody class="quote-pdf-table__body">
+
+
+                <!-- Exporta Logo and Supplier Namer -->
+
+                <!-- Table Header -->
+                <tr class="quote-pdf-table__header">
+                    <td style="width: 100%;">
+                        <img alt="exporta logo"
+                            src="https://f.hubspotusercontent30.net/hubfs/7596986/01_Main%20Exporta%20Logo%20(2).png"
+                            style="width: 218px; height: 58px;" />
+                    </td>
+                </tr>
+                <!-- Table Header END -->
+                
+                <!-- Buyer data START -->
+                <tr >
+                    <td>
+                        <a href="" class="quote-pdf--block quote-pdf--black" style="size: 18px;"><b>Buyer's Company
+                                Name</b></a>
+                        <a href="" class="quote-pdf--block" style="size: 16px;">Buyer's first and last name</a>
+                        <a href="" class="quote-pdf--block" style="size: 16px;">Buyer's address</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <!-- Buyer data END -->
+                
+                <!-- Order Details START -->
+                <tr>
+                    <td>
+                        <h3 class="quote-pdf--black quote-pdf--supplier-name" style="size: 18px;">Order ID: ID Order
+                        </h3>
+                        <a href="" class="quote-pdf--block quote-pdf--black" style="size: 16px;">Quote ID: ID Quote</a>
+                        <a href="" class="quote-pdf--block quote-pdf--black" style="size: 16px;">Placed Date:
+                            03/21/2022</a>
+                        <a href="" class="quote-pdf--block quote-pdf--black" style="size: 16px;">Order Type: <span style="background-color: #F58845;"><b style="color: #ffffff;">Sample Order</b></span></a>
+                        <a href="" class="quote-pdf--block quote-pdf--black" style="size: 16px;">Supplier Company:
+                            Company</a>
+                    </td>
+                    <td></td>
+                </tr>
+                <!-- Order Details END -->
+
+                <!-- Order START -->
+                <tr>
+                    <td colspan=12>
+                        <h3 class="quote-pdf--supplier-name quote-pdf--orange" style="size: 18px;">Order</h3>
+                        <table class="quote-pdf__products-table" border="1" cellpadding="0" cellspacing="0" width="100%"
+                            style="margin: auto">
+                            <tbody>
+                                <tr>
+                                    <th class="quote-pdf--text-left quote-pdf--black quote-pdf__table-header">Product &
+                                        Description</th>
+                                    <th class="quote-pdf--text-right quote-pdf--black quote-pdf__table-header">Total
+                                    </th>
+                                </tr>
+                                <tr class="no-border">
+                                    <td class="quote-pdf--text-left quote-pdf--text-pricing no-border quote-pdf--black">
+                                        <p style="font-size: 18px;"><b>Product name</b></p>
+                                        <p style="font-size: 14px;">Variation Quoted</p>
+                                        <p style="font-size: 14px;">Quantity quoted:</p>
+                                        <p style="font-size: 14px;">Lead time:</p>
+                                        <p style="font-size: 14px;">Unit price (USD):</p>
+                                    </td>
+                                    <td class="quote-pdf--text-right quote-pdf--text-pricing no-border quote-pdf--black"
+                                        style="font-style: italic !important;">$282</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="quote-pdf__products-table table-border" cellpadding="0" cellspacing="0" width="100%"
+                            style="margin: auto">
+                            <tbody>
+                                <tr>
+                                    <hr style="width:100%;text-align:left;margin-left:0; background-color: #6f6f6f;">
+                                    <th class="quote-pdf--text-left quote-pdf--orange quote-pdf__table-header">Subtotal (USD)
+                                    </th>
+                                    <td class="quote-pdf--text-right quote-pdf--black quote-pdf__table-header">$1234
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Order END -->
+
+                <!-- Aditional Fees START -->
+                <tr>
+                    <td colspan=12 style="padding-top: 0px;">
+                        <h4 class="quote-pdf--block quote-pdf--black" style="size: 18px; padding-top: 10px;padding-bottom: 10px;"> Aditional Fees</h4>
+                        <table class="quote-pdf__products-table" border="1" cellpadding="0" cellspacing="0" width="100%"
+                            style="margin: auto">
+                            <tbody>
+                                <tr>
+                                    <td class="quote-pdf--text-left quote-pdf--black">Fee Name</td>
+                                    <td class="quote-pdf--text-right quote-pdf--black">$3.24</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Aditional Fees END -->
+                
+                <!-- Total START -->
+                <tr>
+                    <td colspan=12>
+                        <table class="quote-pdf__products-table" border="1" cellpadding="0" cellspacing="0" width="100%"
+                            style="margin: auto">
+                            <tbody>
+                                <tr>
+                                    <hr style="width:100%;text-align:left;margin-left:0; background-color: #6f6f6f;">
+                                    <th class="quote-pdf--text-left quote-pdf--orange quote-pdf__table-header">Total
+                                    </th>
+                                    <th class="quote-pdf--text-right quote-pdf--black quote-pdf__table-header">$1234
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Total END -->
+
+                <!-- Buyer Company/Name START -->
+                <tr>
+                    <td colspan=12>
+                        <table class="quote-pdf__products-table" border="1" cellpadding="20" cellspacing="0" width="100%"
+                            style="margin: auto">
+                            <tbody>
+                                <hr style="width:50%; text-align:right ;margin-right:0; height: 1px; background-color: #000000;">
+                                <tr>
+                                    <th class="quote-pdf--text-right quote-pdf--black quote-pdf-table__header"
+                                        width=60%">Greg Fish</th>
+                                </tr>
+                                <tr>
+                                    <td class="quote-pdf--text-right quote-pdf--text-pricing no-border quote-pdf--black">
+                                        Hae Fish</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <!-- Buyer Company/Name END -->
+
+                <!-- Table Subheader END -->
+            </tbody>
+            <!-- Table BODY END -->
+        </table>
+    </div>
+    <!-- TABLE END -->
+</body>
+<!-- Body END -->
