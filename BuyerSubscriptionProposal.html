@@ -1,0 +1,451 @@
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+    @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap");
+
+    .buyersubs-pdf-container>th,
+    .buyersubs-pdf-container td,
+    .buyersubs-pdf-container>tr,
+    .buyersubs-pdf-container table {
+        border: unset !important;
+    }
+
+    * {
+        font-family: "Roboto", sans-serif;
+    }
+
+    /* MAIN buyersubs Container  */
+    .buyersubs-pdf-container {
+        color: #ffffff;
+    }
+
+    /* Main buyersubs Table Container */
+    .buyersubs-pdf-table {
+        border: unset !important;
+    }
+
+    /* Main buyersubs BODY */
+    .buyersubs-pdf-table__body {
+        padding: 0;
+    }
+
+    .buyersubs-pdf-table__header {
+        padding-bottom: 15px;
+    }
+
+    /* Header */
+    .buyersubs-pdf-table__header td {
+        padding: 18px 0px;
+    }
+
+    .buyersubs-pdf-table__header--logo {
+        display: inline-block;
+        width: 75px;
+        place-self: center;
+    }
+
+    .buyersubs-pdf-table__header--logo img {
+        display: inline-block;
+    }
+
+    /* Subheader */
+    tr.buyersubs-pdf-table__subheader {
+        border: unset;
+    }
+
+    td.buyersubs-pdf-table__subheader--name {
+        border: unset;
+    }
+
+    .buyersubs-pdf-table__subheader--reference h3 {
+        text-align: right;
+    }
+
+    .buyersubs-pdf-table__subheader--reference,
+    .buyersubs-pdf-table__subheader--name {
+        padding: 16px 0;
+    }
+
+    .buyersubs-pdf-table__actions {
+        padding: 20px 0;
+        display: none;
+    }
+
+    .buyersubs-pdf-table__add-button {
+        background: #f58845;
+        color: white !important;
+        padding: 10px 30px;
+        border-radius: 6px;
+        margin-right: 10px;
+    }
+
+    .buyersubs-pdf-table__view-button {
+        background: white;
+        border: 1px solid #f58845;
+        color: #f58845 !important;
+        padding: 10px 30px;
+        border-radius: 6px;
+    }
+
+    /* Main buyersubs Utilities */
+    .buyersubs-pdf--block {
+        display: block;
+    }
+
+    .buyersubs-pdf--before {
+        page-break-before: always;
+    }
+
+    .buyersubs-pdf--after {
+        page-break-after: always;
+    }
+
+    .buyersubs-pdf--avoid {
+        page-break-inside: avoid;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a {
+        margin: unset;
+    }
+
+    h3 {
+        display: block;
+        font-size: 1.17em;
+        font-weight: bold;
+    }
+
+    .buyersubs-pdf--bold {
+        font-weight: 900;
+    }
+
+    .buyersubs-pdf--text {
+        padding-bottom: 10px;
+    }
+
+    .buyersubs-pdf--text-right {
+        text-align: right;
+    }
+
+    .buyersubs-pdf--text-left {
+        text-align: left;
+    }
+
+    .buyersubs-pdf--text-center {
+        text-align: center;
+    }
+
+    .buyersubs-pdf-description {
+        margin-top: 10px !important;
+        padding-bottom: 15px;
+    }
+
+    .buyersubs-pdf__products-table {
+        margin-top: 10px !important;
+    }
+
+    .buyersubs-pdf--orange {
+        color: #f58845 !important;
+    }
+
+    .buyersubs-pdf--black {
+        color: #000000 !important;
+    }
+
+    .buyersubs-pdf--text-pricing {
+        padding: 10px 0;
+    }
+
+    .no-border {
+        border: none;
+    }
+
+    table.buyersubs-pdf__products-table {
+        border: none;
+        border-radius: 10px;
+    }
+
+    .buyersubs-pdf__products-table tbody {
+        border: none;
+    }
+
+    .buyersubs-pdf__products-table th {
+        padding: 10px 0px !important;
+        border: none;
+        font-weight: 900;
+    }
+
+    .buyersubs-pdf__products-table tr {
+        border: none;
+    }
+
+    #show-pdf-buyer .buyersubs-pdf-table__action {
+        display: block;
+    }
+
+    #show-pdf-buyer .buyersubs-pdf-table__action a {
+        pointer-events: auto !important;
+    }
+
+    .buyersubs-pdf-container a {
+        text-decoration: none !important;
+        color: black;
+        font-size: 16px;
+    }
+
+    .buyersubs-pdf-container a {
+        pointer-events: none;
+    }
+
+    .buyersubs-pdf_top-padding {
+        padding-top: 15px;
+    }
+
+    .buyersubs-pdf_top-padding-20 {
+        padding-top: 15px;
+    }
+
+    td.list {
+        list-style: none;
+    }
+
+    td li:before {
+        color: #f58845;
+        font-weight: bold;
+        display: inline-block;
+        width: 1.5em;
+        margin-left: 1em;
+        content: '✓';
+    }
+
+    li {
+        color:
+    }
+
+    hr.dottedline {
+        border: none;
+        border-top: 1px dashed #6f6f6f;
+        border-width: 2px;
+        color: #fff;
+        background-color: #fff;
+        height: 1px;
+        width: 100%;
+    }
+</style>
+
+<!-- Body Start -->
+
+<body>
+    <!-- TABLE START  -->
+    <div id="buyersubs-pdf-container" class="buyersubs-pdf-container">
+        <table class="buyersubs-pdf-table" cellpadding="0" cellspacing="0" width="650"
+            style="margin: auto; overflow-y: hidden; border: 1px solid black">
+            <!-- Table BODY START-->
+            <tbody class="buyersubs-pdf-table__body">
+                <!-- Exporta Logo and Exporta Information -->
+
+                <!-- Table Header -->
+                <tr class="buyersubs-pdf-table__header">
+                    <td>
+                        <img alt="exporta logo"
+                            src="https://f.hubspotusercontent30.net/hubfs/7596986/01_Main%20Exporta%20Logo%20(2).png"
+                            style="width: 218px; height: 58px; place-self: center" />
+                    </td>
+                </tr>
+                <tr class="buyersubs-pdf-table__header">
+                    <td>
+                        <h3 style="text-align: left; font-size: 22px" class="buyersubs-pdf--block buyersubs-pdf--black">
+                            Platform Access + Services Work Proposal</h3>
+                    </td>
+
+                    <!-- <td></td> -->
+                    <!-- Exporta Information -->
+                    <!-- <td style="vertical-align: middle">
+              <h3 style="text-align: right; font-size: 16px" class="buyersubs-pdf--block buyersubs-pdf--black">Exporta
+                Technologies</h3>
+              <h3 style="text-align: right; font-size: 16px" class="buyersubs-pdf--block buyersubs-pdf--black">716 McGill Pl
+                NE</h3>
+              <h3 style="text-align: right; font-size: 16px" class="buyersubs-pdf--block buyersubs-pdf--black">Atlanta, GA
+                30312</h3>
+            </td> -->
+                </tr>
+
+                <!-- buyersubs Table START -->
+                <tr>
+                    <td colspan=12 class="buyersubs-pdf_top-padding">
+                        <table class="buyersubs-pdf__products-table" border="1" cellpadding="20" cellspacing="0"
+                            width="100%" style="margin: auto">
+                            <tbody>
+                                <tr>
+                                    <th class="buyersubs-pdf--text-left buyersubs-pdf--black buyersubs-pdf-table__header"
+                                        width="35%">Buyer’s Company</th>
+                                    <th
+                                        class="buyersubs-pdf--text-right buyersubs-pdf--black buyersubs-pdf-table__header">
+                                        Exporta Technologies</th>
+                                </tr>
+                                <tr>
+                                    <td class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black"
+                                        width="35%">Buyer’s Name
+                                    </td>
+                                    <td
+                                        class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
+                                        716 McGill Pl,</td>
+                                </tr>
+                                <tr>
+                                    <td class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black"
+                                        width="35%">5989 treven way
+                                    </td>
+                                    <td
+                                        class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
+                                        Atlanta, GA,</td>
+                                </tr>
+                                <tr>
+                                    <td class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black"
+                                        width="35%">Westerville, Ohio
+                                    </td>
+                                    <td
+                                        class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
+                                        30312</td>
+                                </tr>
+                                <tr>
+                                    <td class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black"
+                                        width="35%">43081
+                                    </td>
+                                    <td
+                                        class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
+                                        Creation Date: 03/21/2022</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                        <!-- buyersubs Fees START  -->
+
+                <tr>
+                    <td colspan="0" class="buyersubs-pdf_top-padding">
+                        <table class="buyersubs-pdf__products-table" border="1" cellpadding="0" cellspacing="0"
+                            width="100%" style="margin: auto">
+                            <tbody>
+                                <tr class="no-border">
+                                    <td
+                                        class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
+                                        Dear XXXX</td>
+                    </td>
+                </tr>
+                <tr class="no-border">
+                    <td class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">Here
+                        at Exporta we are excited to welcome you to our platform and services so that you can join the
+                        largest B2B network connecting Latin American Suppliers and U.S. Buyers. </td>
+                </tr>
+
+                <tr>
+                    <td colspan="0" class="buyersubs-pdf_top-padding">
+                        <table class="buyersubs-pdf__products-table" border="1" cellpadding="0" cellspacing="0"
+                            width="100%" style="margin: auto">
+                            <tbody>
+                                <tr class="no-border">
+                                    <h3 style="text-align: left; font-size: 18px"
+                                        class="buyersubs-pdf--block buyersubs-pdf--black">
+                                        Platform Access + Services Work Proposal</h3>
+                                </tr>
+                                <tr class="no-border">
+                                    <td
+                                        class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
+                                        In addition to gain access to our platform you will also get: </td>
+                                </tr>
+                                <table class="buyersubs-pdf__products-table" border="1" cellpadding="7" cellspacing="7"
+                                    width="100%" style="margin: auto; background-color:#F3F3F3;">
+                                    <tr>
+                                        <td class="list">
+                                            <li>Access our network of audited factories in Mexico, Central, and South
+                                                America.</li>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="list">
+                                            <li>Talk directly to our suppliers via mobile or desktop.</li>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="list">
+                                            <li>Submit unlimited Requests-for-Quotes (RFQs). Manage all Quote
+                                                submissions
+                                                from our suppliers.</li>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="list">
+                                            <li>Send prototypes and easily manage samples and purchase orders.</li>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <hr class="dottedline">
+                                            </hr>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="list">
+                                            <li>Connect via immediate Zoom-links or schedule a meeting with one of our
+                                                bilingual Project Managers (PMs).</li>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="list">
+                                            <li>Process inbound and outbound shipments with the support from our
+                                                Operations team located in the United States and Latin America</li>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="list">
+                                            <li>Negotiate on the go, with real-time conversations and translations,
+                                                supported by our bilingual team.</li>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table class="buyersubs-pdf__products-table" border="1" cellpadding="0" cellspacing="0"
+                                    width="100%" style="margin: auto;">
+                                    <tr class="no-border">
+                                        <h3 style="text-align: left; font-size: 18px; padding-top: 20px;"
+                                            class="buyersubs-pdf--block buyersubs-pdf--black">
+                                            Platform Access + Services Work Proposal</h3>
+                                    </tr>
+                                    <tr class="no-border">
+                                        <td
+                                            class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
+                                            As we established in our previous call, we expect to match you with a
+                                            suitable supplier within a <font style="color: #f58845;">x_month timeframe
+                                            </font>. After your first purchase order, your monthly platform access fee
+                                            will be reduced to <font style="color: #f58845;">$19.99 / month</font>. If
+                                            no purchase order has been placed, your platform access fee will remain at
+                                            <font style="color: #f58845;">$299 / month</font>
+                                        </td>
+                                    </tr>
+                                    <tr class="no-border">
+                                        <td
+                                            class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
+                                            We offer a <b>
+                                                <font style="color: #f58845;">20% discount if you pay up front</font>
+                                            </b> for our proposed X month engagement plan.</td>
+                                    </tr>
+                                </table>
+                            </tbody>
+                        </table>
+                    </td>
+                    <!-- buyersubs Fees END -->
+                    </td>
+                </tr>
+                <!-- buyersubs Table END -->
+            </tbody>
+            <!-- Table BODY END -->
+        </table>
+    </div>
+    <!-- TABLE END -->
+</body>
+<!-- Body END -->
