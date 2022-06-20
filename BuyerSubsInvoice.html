@@ -1,0 +1,434 @@
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+    @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap");
+
+    .buyersubs-pdf-container>th,
+    .buyersubs-pdf-container td,
+    .buyersubs-pdf-container>tr,
+    .buyersubs-pdf-container table {
+        border: unset !important;
+    }
+
+    * {
+        font-family: "Roboto", sans-serif;
+    }
+
+    /* MAIN buyersubs Container  */
+    .buyersubs-pdf-container {
+        color: #ffffff;
+    }
+
+    /* Main buyersubs Table Container */
+    .buyersubs-pdf-table {
+        border: unset !important;
+    }
+
+    /* Main buyersubs BODY */
+    .buyersubs-pdf-table__body {
+        padding: 0;
+    }
+
+    .buyersubs-pdf-table__header {
+        padding-bottom: 15px;
+    }
+
+    /* Header */
+    .buyersubs-pdf-table__header td {
+        padding: 18px 0px;
+    }
+
+    .buyersubs-pdf-table__header--logo {
+        display: inline-block;
+        width: 75px;
+        place-self: center;
+    }
+
+    .buyersubs-pdf-table__header--logo img {
+        display: inline-block;
+    }
+
+    /* Subheader */
+    tr.buyersubs-pdf-table__subheader {
+        border: unset;
+    }
+
+    td.buyersubs-pdf-table__subheader--name {
+        border: unset;
+    }
+
+    .buyersubs-pdf-table__subheader--reference h3 {
+        text-align: right;
+    }
+
+    .buyersubs-pdf-table__subheader--reference,
+    .buyersubs-pdf-table__subheader--name {
+        padding: 16px 0;
+    }
+
+    .buyersubs-pdf-table__actions {
+        padding: 20px 0;
+        display: none;
+    }
+
+    .buyersubs-pdf-table__add-button {
+        background: #f58845;
+        color: white !important;
+        padding: 10px 30px;
+        border-radius: 6px;
+        margin-right: 10px;
+    }
+
+    .buyersubs-pdf-table__view-button {
+        background: white;
+        border: 1px solid #f58845;
+        color: #f58845 !important;
+        padding: 10px 30px;
+        border-radius: 6px;
+    }
+
+    /* Main buyersubs Utilities */
+    .buyersubs-pdf--block {
+        display: block;
+    }
+
+    .buyersubs-pdf--before {
+        page-break-before: always;
+    }
+
+    .buyersubs-pdf--after {
+        page-break-after: always;
+    }
+
+    .buyersubs-pdf--avoid {
+        page-break-inside: avoid;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a {
+        margin: unset;
+    }
+
+    h3 {
+        display: block;
+        font-size: 1.17em;
+        font-weight: bold;
+    }
+
+    .buyersubs-pdf--bold {
+        font-weight: 900;
+    }
+
+    .buyersubs-pdf--text {
+        padding-bottom: 10px;
+    }
+
+    .buyersubs-pdf--text-right {
+        text-align: right;
+    }
+
+    .buyersubs-pdf--text-left {
+        text-align: left;
+    }
+
+    .buyersubs-pdf--text-center {
+        text-align: center;
+    }
+
+    .buyersubs-pdf-description {
+        margin-top: 10px !important;
+        padding-bottom: 15px;
+    }
+
+    .buyersubs-pdf__products-table {
+        margin-top: 10px !important;
+    }
+
+    .buyersubs-pdf--black {
+        color: #f58845 !important;
+    }
+
+    .buyersubs-pdf--black {
+        color: #000000 !important;
+    }
+
+    .buyersubs-pdf--text-pricing {
+        padding: 10px 0;
+    }
+
+    .no-border {
+        border: none;
+    }
+
+    table.buyersubs-pdf__products-table {
+        border: none;
+        
+    }
+
+    table.buyersubs-pdf__products-table_border-radius {
+        border: none;
+        border-radius: 10px;
+    }
+
+    .buyersubs-pdf__products-table tbody {
+        border: none;
+    }
+
+    .buyersubs-pdf__products-table th {
+        padding: 10px 0px !important;
+        border: none;
+        font-weight: 900;
+    }
+
+    .buyersubs-pdf__products-table tr {
+        border: none;
+    }
+
+    .buyersubs-pdf__products-buyertable tbody {
+        border: none;
+    }
+
+    .buyersubs-pdf__products-buyertable th {
+        padding: 2px 0px !important;
+        border: none;
+        font-weight: 900;
+    }
+
+    .buyersubs-pdf__products-buyertable td {
+        padding: 2px 0px !important;
+        border: none;
+    }
+
+    #show-pdf-buyer .buyersubs-pdf-table__action {
+        display: block;
+    }
+
+    #show-pdf-buyer .buyersubs-pdf-table__action a {
+        pointer-events: auto !important;
+    }
+
+    .buyersubs-pdf-container a {
+        text-decoration: none !important;
+        color: black;
+        font-size: 16px;
+    }
+
+    .buyersubs-pdf-container a {
+        pointer-events: none;
+    }
+
+    .buyersubs-pdf_top-padding {
+        padding-top: 15px;
+        border-radius: 16px;
+    }
+
+    .buyersubs-pdf_top-padding-20 {
+        padding-top: 15px;
+    }
+
+    hr.dottedline {
+        border: none;
+        border-top: 1px dashed #6f6f6f;
+        border-width: 2px;
+        color: #fff;
+        background-color: #f3f3f3;
+        height: 1px;
+        width: 100%;
+    }
+    li.dottedline {
+        border: none;
+        border-top: 1px dashed #6f6f6f;
+        border-width: 2px;
+        color: #fff;
+        background-color: #f3f3f3;
+        height: 1px;
+        width: 95%;
+    }
+
+    hr.solidline {
+        border: none;
+        border-top: 1px solid #000000;
+        border-width: 2px;
+        color: #fff;
+        background-color: #f3f3f3;
+        height: 1px;
+        width: 100%;
+    }
+
+    hr.solidlineGrey {
+        border: none;
+        border-top: 1px solid #e3e3e3;
+        border-width: 2px;
+        color: #fff;
+        background-color: #f3f3f3;
+        height: 1px;
+        width: 100%;
+    }
+
+    .dashed {
+        border-bottom: 1px dashed #6f6f6f;
+        border-width: 2px;
+        text-align: center;
+        height: 10px;
+        margin-bottom: 10px;
+    }
+
+    .dashed span {
+        background: #fff;
+        padding: 0px 10px;
+    }
+</style>
+
+<!-- Body Start -->
+
+<body>
+    <!-- TABLE START  -->
+    <div id="buyersubs-pdf-container" class="buyersubs-pdf-container">
+        <table class="buyersubs-pdf-table" cellpadding="0" cellspacing="0" width="650"
+            style="margin: auto; overflow-y: hidden; border: 1px solid black">
+            <!-- Table BODY START-->
+            <tbody class="buyersubs-pdf-table__body">
+                <!-- Exporta Logo and Exporta Information -->
+
+                <!-- Table Header -->
+                <tr class="buyersubs-pdf-table__header">
+                    <td>
+                        <img alt="exporta logo"
+                            src="https://f.hubspotusercontent30.net/hubfs/7596986/01_Main%20Exporta%20Logo%20(2).png"
+                            style="width: 218px; height: 58px; place-self: center" />
+                    </td>
+                </tr>
+                <tr class="buyersubs-pdf-table__header">
+                    <td>
+                        <h3 style="text-align: left; font-size: 22px;" class="buyersubs-pdf--block buyersubs-pdf--black">
+                            Platform Access + Services Bill</h3>
+                    </td>
+                </tr>
+                <tr class="no-border">
+                    <td>
+                        <h3 style="text-align: left; font-size: 18px; padding-top: 15px;" class="buyersubs-pdf--block buyersubs-pdf--black">
+                            Thank you for choosing Exporta</h3>
+                    </td>
+                </tr>
+                <tr class="no-border">
+                    <td class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black" style="padding-top: 15px;">
+                        Exporta Montly Platform Access + Services
+                    </td>
+                </tr>
+                <tr class="no-border">
+                    <td class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black" style="padding-top: 15px;">
+                        <b>Order date: </b> 
+                    </td>
+                </tr>
+                <tr class="no-border">
+                    <td class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black" style="padding-top: 15px;">
+                        <b>Account email: </b>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="0" class="buyersubs-pdf_top-padding">
+                        <table class="buyersubs-pdf__products-table" border="1" cellpadding="0" cellspacing="0"
+                            width="100%" style="margin: auto">
+                            <tbody>
+                                <table class="buyersubs-pdf__products-table_border-radius, buyersubs-pdf--avoid" border="1" cellpadding="0" cellspacing="5"
+                                    width="100%" style="margin: auto; background-color:#F3F3F3; border: solid; border-color: #F3F3F3; border-radius: 10px;">
+                                    <tbody class="buyersubs-pdf--avoid">
+                                        <tr>
+                                            <th class="buyersubs-pdf--text-left buyersubs-pdf--black buyersubs-pdf__table-header"
+                                                width="62%">Item</th>
+                                            <th
+                                                class="buyersubs-pdf--text-right buyersubs-pdf--black buyersubs-pdf__table-header">
+                                                Price</th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <hr class="solidline" width="100%">
+                                                </hr>
+                                            </td>
+                                            <td>
+                                                <hr class="solidline" width="100%">
+                                                </hr>
+                                            </td>
+                                        </tr>
+                                        <tr class="no-border">
+                                            <td width="62%"
+                                                class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
+                                                Exporta Monthly Platform Access + Services</td>
+                                            <td
+                                                class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
+                                                Group Subscription Record's Subscription Record's Price:formatted as $1028.58
+                                            </td>
+                                        </tr>
+                                        <tr class="no-border">
+                                            <td width="62%"
+                                                class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
+                                                Auto-renewing subscription</td>
+                                            <td
+                                                class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
+                                                Arbitrary text:converted to number:formatted as $1028.58
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <hr class="dottedline" width="100%">
+                                                </hr>
+                                            </td>
+                                            <td>
+                                                <hr class="dottedline" width="100%">
+                                                </hr>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="buyersubs-pdf--text-left buyersubs-pdf--black buyersubs-pdf__table-header"
+                                                width="62%">Total</th>
+                                            <td
+                                                class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--orange">
+                                                <b>
+                                                    <font style="color: #f58845;">Group Subscription Record's Subscription Record's Price / 0.971 + 0.3:rounded to 2:formatted as $1028.58</font>
+                                                </b>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <hr class="solidlineGrey" width="125%">
+                                                </hr>
+                                            </td>
+                                            <td>
+                                                <hr class="solidlineGrey" width="125%">
+                                                </hr>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
+                                                Payment method:
+                                            </td>
+                                            <td class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
+                                                VISA - XXXX
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <tr>
+                                    <td class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black" style="padding-top: 50px;">
+                                        <b>Exporta Technologies</b> 716 McGill Pl, Atlanta, GA, 30312
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <!-- buyersubs Fees END -->
+                </tr>
+                <!-- buyersubs Table END -->
+            </tbody>
+            <!-- Table BODY END -->
+        </table>
+    </div>
+    <!-- TABLE END -->
+</body>
+<!-- Body END -->

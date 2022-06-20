@@ -189,6 +189,21 @@
         border: none;
     }
 
+    .buyersubs-pdf__products-buyertable tbody {
+        border: none;
+    }
+
+    .buyersubs-pdf__products-buyertable th {
+        padding: 0px 0px !important;
+        border: none;
+        font-weight: 900;
+    }
+
+    .buyersubs-pdf__products-buyertable td {
+        padding: 0px 0px !important;
+        border: none;
+    }
+
     #show-pdf-buyer .buyersubs-pdf-table__action {
         display: block;
     }
@@ -215,22 +230,47 @@
         padding-top: 15px;
     }
 
-    td.list {
+    ul {
         list-style: none;
+        list-style-position: inside;
+        padding-left: 1em;
+        background-color: #f3f3f3;
+        border-radius: 16px;
+        margin-left: 0px;
     }
 
-    td li:before {
+    ul li:before {
         color: #f58845;
         font-weight: bold;
         display: inline-block;
         width: 1.5em;
-        margin-left: 1em;
+        margin-left: 0em;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
         content: '✓';
     }
 
     hr.dottedline {
         border: none;
         border-top: 1px dashed #6f6f6f;
+        border-width: 2px;
+        color: #fff;
+        background-color: #f3f3f3;
+        height: 1px;
+        width: 100%;
+    }
+    li.dottedline {
+        border: none;
+        border-top: 1px dashed #6f6f6f;
+        border-width: 2px;
+        color: #fff;
+        background-color: #f3f3f3;
+        height: 1px;
+        width: 95%;
+    }
+    hr.solidline {
+        border: none;
+        border-top: 1px solid #000000;
         border-width: 2px;
         color: #fff;
         background-color: #f3f3f3;
@@ -248,25 +288,8 @@
 
     .dashed span {
         background: #fff;
-        padding: 0 5px;
+        padding: 0px 10px;
     }
-
-    .button {
-        border: none;
-        color: white;
-        padding: 15px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 1px 1px;
-        cursor: pointer;
-        background-color: #f58845;
-        border-radius: 10px;
-    }
-
-    
-    
 </style>
 
 <!-- Body Start -->
@@ -297,13 +320,13 @@
 
                 <!-- buyersubs Table START -->
                 <tr>
-                    <td colspan=12>
-                        <table class="buyersubs-pdf__products-table" border="1" cellpadding=0 cellspacing=0
+                    <td colspan=12 class="buyersubs-pdf_top-padding">
+                        <table class="buyersubs-pdf__products-buyertable" border="1" cellpadding="20" cellspacing="0"
                             width="100%" style="margin: auto">
                             <tbody>
-                                <tr class="zerospacing">
+                                <tr>
                                     <th class="buyersubs-pdf--text-left buyersubs-pdf--black buyersubs-pdf-table__header"
-                                        width="35%">Buyer’s Company</th>
+                                        width="75%">Buyer's company</th>
                                     <th
                                         class="buyersubs-pdf--text-right buyersubs-pdf--black buyersubs-pdf-table__header">
                                         Exporta Technologies</th>
@@ -352,8 +375,7 @@
                             width="100%" style="margin: auto">
                             <tbody>
                                 <tr class="no-border">
-                                    <td
-                                        class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
+                                    <td class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
                                         Dear XXXX</td>
                     </td>
                 </tr>
@@ -378,50 +400,22 @@
                                         class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
                                         In addition to gain access to our platform you will also get: </td>
                                 </tr>
-                                <table class="buyersubs-pdf__products-table_border-radius" border="1" cellpadding="7"
-                                    cellspacing="7" width="100%" style="margin: auto; background-color:#F3F3F3;">
+                                <table class="buyersubs-pdf__products-table_border-radius" border="1" cellpadding="0"
+                                    cellspacing="0" width="100%" style="margin: auto; background-color:#F3F3F3;">
                                     <tr>
-                                        <td class="list">
+                                        <ul>
                                             <li><font style="color: #000000;">Access our network of audited factories in Mexico, Central, and South America.</font></li>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="list">
                                             <li><font style="color: #000000;">Talk directly to our suppliers via mobile or desktop.</font></li>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="list">
                                             <li><font style="color: #000000;">Submit unlimited Requests-for-Quotes (RFQs). Manage all Quote submissions from our suppliers.</font></li>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="list">
                                             <li><font style="color: #000000;">Send prototypes and easily manage samples and purchase orders.</font></li>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <hr class="dottedline">
-                                            </hr>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="list">
+                                            <li class="dottedline"></li>
                                             <li><font style="color: #000000;">Connect via immediate Zoom-links or schedule a meeting with one of our bilingual Project Managers (PMs).</font></li>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="list">
                                             <li><font style="color: #000000;">Process inbound and outbound shipments with the support from our Operations team located in the United States and Latin America</font></li>
-                                        </td>
+                                            <li><font style="color: #000000;">Process inbound and outbound shipments with the support from our Operations team located in the United States and Latin America</font></li>
+                                            <li><font style="color: #000000;">Negotiate on the go, with real-time conversations and translations, supported by our bilingual team.</font></li>
+                                        </ul>
                                     </tr>
-                                    <tr>
-                                        <td class="list">
-                                            <li><font style="color: #000000;">Negotiate on the go, with real-time conversations and translations,
-                                                supported by our bilingual team.</font></li>
-                                        </td>
-                                    </tr>
+                                
                                 </table>
                                 <table class="buyersubs-pdf__products-table" border="1" cellpadding="0" cellspacing="0"
                                     width="100%" style="margin: auto;">
@@ -452,6 +446,11 @@
                                 <table class="buyersubs-pdf__products-table" border="1" cellpadding="0" cellspacing="5"
                                     width="100%" style="margin: auto; background-color:#F3F3F3;">
                                     <tbody>
+                                        <tr class="no-border">
+                                            <h3 style="text-align: left; font-size: 18px; padding-top: 7px; padding-bottom: 7px;"
+                                                class="buyersubs-pdf--block buyersubs-pdf--black">
+                                                Monthly Work Proposal</h3>
+                                        </tr>
                                         <tr style="border-style: solid; border-bottom: #000000;">
                                             <th class="buyersubs-pdf--text-left buyersubs-pdf--black buyersubs-pdf__table-header"
                                                 width="62%">Item</th>
@@ -461,6 +460,20 @@
                                             <th
                                                 class="buyersubs-pdf--text-right buyersubs-pdf--black buyersubs-pdf__table-header">
                                                 Price</th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <hr class="solidline" width="125%">
+                                                </hr>
+                                            </td>
+                                            <td>
+                                                <hr class="solidline" width="125%">
+                                                </hr>
+                                            </td>
+                                            <td>
+                                                <hr class="solidline" width="125%">
+                                                </hr>
+                                            </td>
                                         </tr>
                                         <tr class="no-border">
                                             <td width="62%"
@@ -528,30 +541,24 @@
                                                 </b>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <th class="buyersubs-pdf--text-left buyersubs-pdf--black buyersubs-pdf__table-header"
-                                                width="62%"></th>
-                                            <td
-                                                class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--orange">
-                                            </td>
-                                            <td
-                                                class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--orange">
-                                                <button class="button button1"><b>Choose Monthly</b></button>
-                                            </td>
-                                        </tr>
                                     </tbody>
                                 </table>
                                 <tr>
-                                    <td>
+                                    <td style="padding-top: 5px;">
                                         <div class="dashed">
                                             <span><font style="color: #000000;">or</font></span>
                                         </div>
                                     </td>
                                 </tr>
-                                <table class="buyersubs-pdf__products-table" border="1" cellpadding="0" cellspacing="5"
+                                <table class="buyersubs-pdf__products-table, buyer" border="1" cellpadding="0" cellspacing="5"
                                 width="100%" style="margin: auto; background-color:#F3F3F3;">
                                 <tbody>
-                                    <tr style="border-style: solid; border-bottom: #000000;">
+                                    <tr class="no-border">
+                                        <h3 style="text-align: left; font-size: 18px; padding-top: 7px; padding-bottom: 7px;"
+                                            class="buyersubs-pdf--block buyersubs-pdf--black">
+                                            Upfront Payment Option</h3>
+                                    </tr>
+                                    <tr style="border-style: solid; border-bottom: #F3F3F3;">
                                         <th class="buyersubs-pdf--text-left buyersubs-pdf--black buyersubs-pdf__table-header"
                                             width="62%">Item</th>
                                         <th
@@ -560,6 +567,20 @@
                                         <th
                                             class="buyersubs-pdf--text-right buyersubs-pdf--black buyersubs-pdf__table-header">
                                             Total</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <hr class="solidline" width="125%">
+                                            </hr>
+                                        </td>
+                                        <td>
+                                            <hr class="solidline" width="125%">
+                                            </hr>
+                                        </td>
+                                        <td>
+                                            <hr class="solidline" width="125%">
+                                            </hr>
+                                        </td>
                                     </tr>
                                     <tr class="no-border">
                                         <td width="62%"
@@ -640,23 +661,12 @@
                                             </b>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <th class="buyersubs-pdf--text-left buyersubs-pdf--black buyersubs-pdf__table-header"
-                                            width="62%"></th>
-                                        <td class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--orange">
-                                        </td>
-                                        <td
-                                            class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--orange">
-                                            <button class="button button1" onclick="location.href='https://exporta.io/dev_index/'"><b>Choose Lump sum</b></button>
-                                        </td>
-                                    </tr>
                                 </tbody>
                             </table>
                             </tbody>
                         </table>
                     </td>
                     <!-- buyersubs Fees END -->
-                    </td>
                 </tr>
                 <!-- buyersubs Table END -->
             </tbody>

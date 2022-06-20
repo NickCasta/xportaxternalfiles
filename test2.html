@@ -189,6 +189,21 @@
         border: none;
     }
 
+    .buyersubs-pdf__products-buyertable tbody {
+        border: none;
+    }
+
+    .buyersubs-pdf__products-buyertable th {
+        padding: 2px 0px !important;
+        border: none;
+        font-weight: 900;
+    }
+
+    .buyersubs-pdf__products-buyertable td {
+        padding: 2px 0px !important;
+        border: none;
+    }
+
     #show-pdf-buyer .buyersubs-pdf-table__action {
         display: block;
     }
@@ -215,22 +230,47 @@
         padding-top: 15px;
     }
 
-    td.list {
+    ul {
         list-style: none;
+        list-style-position: inside;
+        background-color: #f3f3f3;
+        border-radius: 16px;
+        margin-left: 0px;
+        padding-left: 1em;
     }
 
-    td li:before {
+    ul li:before {
         color: #f58845;
         font-weight: bold;
         display: inline-block;
         width: 1.5em;
-        margin-left: 1em;
+        margin-left: 0em;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
         content: '✓';
     }
 
     hr.dottedline {
         border: none;
         border-top: 1px dashed #6f6f6f;
+        border-width: 2px;
+        color: #fff;
+        background-color: #f3f3f3;
+        height: 1px;
+        width: 100%;
+    }
+    li.dottedline {
+        border: none;
+        border-top: 1px dashed #6f6f6f;
+        border-width: 2px;
+        color: #fff;
+        background-color: #f3f3f3;
+        height: 1px;
+        width: 95%;
+    }
+    hr.solidline {
+        border: none;
+        border-top: 1px solid #000000;
         border-width: 2px;
         color: #fff;
         background-color: #f3f3f3;
@@ -248,25 +288,8 @@
 
     .dashed span {
         background: #fff;
-        padding: 0 5px;
+        padding: 0px 10px;
     }
-
-    .button {
-        border: none;
-        color: white;
-        padding: 15px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 1px 1px;
-        cursor: pointer;
-        background-color: #f58845;
-        border-radius: 10px;
-    }
-
-    
-    
 </style>
 
 <!-- Body Start -->
@@ -297,20 +320,20 @@
 
                 <!-- buyersubs Table START -->
                 <tr>
-                    <td colspan=12>
-                        <table class="buyersubs-pdf__products-table" border="1" cellpadding=0 cellspacing=0
+                    <td colspan=12 class="buyersubs-pdf_top-padding">
+                        <table class="buyersubs-pdf__products-buyertable" border="1" cellpadding="20" cellspacing="0"
                             width="100%" style="margin: auto">
                             <tbody>
-                                <tr class="zerospacing">
+                                <tr>
                                     <th class="buyersubs-pdf--text-left buyersubs-pdf--black buyersubs-pdf-table__header"
-                                        width="35%">Buyer’s Company</th>
+                                        width="50%">Parent group's Company's Company Name</th>
                                     <th
                                         class="buyersubs-pdf--text-right buyersubs-pdf--black buyersubs-pdf-table__header">
                                         Exporta Technologies</th>
                                 </tr>
                                 <tr>
                                     <td class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black"
-                                        width="35%">Buyer’s Name
+                                        width="35%">Parent group's Company's Users:each item's Personal Info - First Name:first item Parent group's Company's Users:each item's Personal Info - Last Name:first item
                                     </td>
                                     <td
                                         class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
@@ -318,27 +341,25 @@
                                 </tr>
                                 <tr>
                                     <td class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black"
-                                        width="35%">5989 treven way
-                                    </td>
+                                        width="35%">Parent group's Company's Location - Address 1, Parent group's Company's Location - City</td>
                                     <td
                                         class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
                                         Atlanta, GA,</td>
                                 </tr>
                                 <tr>
                                     <td class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black"
-                                        width="35%">Westerville, Ohio
-                                    </td>
+                                        width="35%">Parent group's Company's Location - State, Parent group's Company's Location - Country</td>
                                     <td
                                         class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
                                         30312</td>
                                 </tr>
                                 <tr>
                                     <td class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black"
-                                        width="35%">43081
+                                        width="35%">Parent group's Company's Location - Zipcode
                                     </td>
                                     <td
                                         class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
-                                        Creation Date: 03/21/2022</td>
+                                        Creation Date: Current date/time:formatted as 6/20/22</td>
                                 </tr>
 
                             </tbody>
@@ -352,15 +373,14 @@
                             width="100%" style="margin: auto">
                             <tbody>
                                 <tr class="no-border">
-                                    <td
-                                        class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
-                                        Dear XXXX</td>
+                                    <td class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
+                                        Dear Parent group's Company's Users:each item's Personal Info - First Name:first item Parent group's Company's Users:each item's Personal Info - Last Name:first item</td>
                     </td>
                 </tr>
                 <tr class="no-border">
                     <td class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">Here
-                        at Exporta we are excited to welcome you to our platform and services so that you can join the
-                        largest B2B network connecting Latin American Suppliers and U.S. Buyers. </td>
+                        at Exporta, we are excited to welcome you to our platform in which you'll be introduced to one of the
+                        largest B2B networks connecting Latin American Suppliers and U.S. Buyers. </td>
                 </tr>
 
                 <tr>
@@ -371,57 +391,28 @@
                                 <tr class="no-border">
                                     <h3 style="text-align: left; font-size: 18px"
                                         class="buyersubs-pdf--block buyersubs-pdf--black">
-                                        Platform Access + Services Work Proposal</h3>
+                                        What's Included in this Work Proposal</h3>
                                 </tr>
                                 <tr class="no-border">
                                     <td
                                         class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
-                                        In addition to gain access to our platform you will also get: </td>
+                                        In addition to gaining access to our platform, you will also be able to: </td>
                                 </tr>
-                                <table class="buyersubs-pdf__products-table_border-radius" border="1" cellpadding="7"
-                                    cellspacing="7" width="100%" style="margin: auto; background-color:#F3F3F3;">
+                                <table class="buyersubs-pdf__products-table_border-radius" border="1" cellpadding="0"
+                                    cellspacing="0" width="100%" style="margin: auto; background-color:#F3F3F3;">
                                     <tr>
-                                        <td class="list">
+                                        <ul>
                                             <li><font style="color: #000000;">Access our network of audited factories in Mexico, Central, and South America.</font></li>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="list">
                                             <li><font style="color: #000000;">Talk directly to our suppliers via mobile or desktop.</font></li>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="list">
                                             <li><font style="color: #000000;">Submit unlimited Requests-for-Quotes (RFQs). Manage all Quote submissions from our suppliers.</font></li>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="list">
                                             <li><font style="color: #000000;">Send prototypes and easily manage samples and purchase orders.</font></li>
-                                        </td>
+                                            <li class="dottedline"></li>
+                                            <li><font style="color: #000000;">Connect via immediate Zoom links or schedule a meeting with one of our bilingual Project Managers (PMs).</font></li>
+                                            <li><font style="color: #000000;">Process inbound and outbound shipments with the support of our Operations team located in the United States and Latin America.</font></li>
+                                            <li><font style="color: #000000;">Negotiate on the go, with real-time conversations and translations, supported by our bilingual team.</font></li>
+                                        </ul>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            <hr class="dottedline">
-                                            </hr>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="list">
-                                            <li><font style="color: #000000;">Connect via immediate Zoom-links or schedule a meeting with one of our bilingual Project Managers (PMs).</font></li>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="list">
-                                            <li><font style="color: #000000;">Process inbound and outbound shipments with the support from our Operations team located in the United States and Latin America</font></li>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="list">
-                                            <li><font style="color: #000000;">Negotiate on the go, with real-time conversations and translations,
-                                                supported by our bilingual team.</font></li>
-                                        </td>
-                                    </tr>
+                                
                                 </table>
                                 <table class="buyersubs-pdf__products-table" border="1" cellpadding="0" cellspacing="0"
                                     width="100%" style="margin: auto;">
@@ -434,58 +425,71 @@
                                         <td
                                             class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
                                             As we established in our previous call, we expect to match you with a
-                                            suitable supplier within a <font style="color: #f58845;">x_month timeframe
-                                            </font>. After your first purchase order, your monthly platform access fee
-                                            will be reduced to <font style="color: #f58845;">$19.99 / month</font>. If
+                                            suitable supplier within <font style="color: #f58845;">Group Subscription Record's Subscription Record's months_of_service month(s)</font>. After your first purchase order, your monthly platform access fee
+                                            will be reduced to <font style="color: #f58845;">Group Subscription Record's Subscription Record's maintenance_fee:formatted as $1028.58 / month</font>. If
                                             no purchase order has been placed, your platform access fee will remain at
-                                            <font style="color: #f58845;">$299 / month</font>
+                                            <font style="color: #f58845;">Group Subscription Record's Subscription Record's Price:formatted as $1028.58 / month.</font>
                                         </td>
                                     </tr>
                                     <tr class="no-border">
                                         <td
                                             class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
-                                            We offer a <b>
-                                                <font style="color: #f58845;">20% discount if you pay up front</font>
-                                            </b> for our proposed X month engagement plan.</td>
+                                            Group Subscription Record's Subscription Record's subscription_discount is 0:formatted as text</td>
                                     </tr>
                                 </table>
-                                <table class="buyersubs-pdf__products-table" border="1" cellpadding="0" cellspacing="5"
-                                    width="100%" style="margin: auto; background-color:#F3F3F3;">
-                                    <tbody>
-                                        <tr style="border-style: solid; border-bottom: #000000;">
+                                <table class="buyersubs-pdf__products-table, buyersubs-pdf--avoid" border="1" cellpadding="0" cellspacing="5"
+                                    width="100%" style="margin: auto; background-color:#F3F3F3; border: solid; border-color: #F3F3F3;">
+                                    <tbody class="buyersubs-pdf--avoid">
+                                        <tr class="no-border">
+                                            <h3 style="text-align: left; font-size: 18px; padding-top: 14px; padding-bottom: 7px;"
+                                                class="buyersubs-pdf--block buyersubs-pdf--black">
+                                                Monthly Work Proposal</h3>
+                                        </tr>
+                                        <tr>
                                             <th class="buyersubs-pdf--text-left buyersubs-pdf--black buyersubs-pdf__table-header"
                                                 width="62%">Item</th>
                                             <th
-                                                class="buyersubs-pdf--text-right buyersubs-pdf--black buyersubs-pdf__table-header">
-                                                Quantity</th>
+                                                class="buyersubs-pdf--text-right buyersubs-pdf--black buyersubs-pdf__table-header"> </th>
                                             <th
                                                 class="buyersubs-pdf--text-right buyersubs-pdf--black buyersubs-pdf__table-header">
                                                 Price</th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <hr class="solidline" width="125%">
+                                                </hr>
+                                            </td>
+                                            <td>
+                                                <hr class="solidline" width="125%">
+                                                </hr>
+                                            </td>
+                                            <td>
+                                                <hr class="solidline" width="125%">
+                                                </hr>
+                                            </td>
                                         </tr>
                                         <tr class="no-border">
                                             <td width="62%"
                                                 class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
                                                 Exporta Monthly Platform Access + Services</td>
                                             <td
-                                                class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
-                                                1
-                                            </td>
+                                                class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black"></td>
                                             <td
                                                 class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
-                                                $299.00
+                                                Group Subscription Record's Subscription Record's Price:formatted as $1028.58
                                             </td>
                                         </tr>
                                         <tr class="no-border">
                                             <td width="62%"
                                                 class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
-                                                credit card fee (2.9% + $0.30)</td>
+                                                Credit Card Fee (2.9% + $0.30)</td>
                                             <td
                                                 class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
                                                 
                                             </td>
                                             <td
                                                 class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
-                                                $8.97
+                                                Arbitrary text:converted to number:formatted as $1028.58
                                             </td>
                                         </tr>
                                         <tr class="no-border">
@@ -494,11 +498,11 @@
                                                 <font style="color: #6f6f6f;">Exporta Monthly Platform Access Maintenance (Post-Purchase Order)</font></td>
                                             <td
                                                 class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
-                                                <font style="color: #6f6f6f;">monthly</font>
+                                                <font style="color: #6f6f6f;"> </font>
                                             </td>
                                             <td
                                                 class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
-                                                <font style="color: #6f6f6f;">$19.99</font>
+                                                <font style="color: #6f6f6f;">Group Subscription Record's Subscription Record's maintenance_fee:formatted as $1028.58</font>
                                             </td>
                                         </tr>
                                         <tr>
@@ -524,81 +528,70 @@
                                             <td
                                                 class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--orange">
                                                 <b>
-                                                    <font style="color: #f58845;">$307.97</font>
+                                                    <font style="color: #f58845;">Group Subscription Record's Subscription Record's Price / 0.971 + 0.3:rounded to 2:formatted as $1028.58</font>
                                                 </b>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <th class="buyersubs-pdf--text-left buyersubs-pdf--black buyersubs-pdf__table-header"
-                                                width="62%"></th>
-                                            <td
-                                                class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--orange">
-                                            </td>
-                                            <td
-                                                class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--orange">
-                                                <button class="button button1"><b>Choose Monthly</b></button>
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
                                 <tr>
-                                    <td>
+                                    <td style="padding-top: 5px;">
                                         <div class="dashed">
                                             <span><font style="color: #000000;">or</font></span>
                                         </div>
                                     </td>
                                 </tr>
                                 <table class="buyersubs-pdf__products-table" border="1" cellpadding="0" cellspacing="5"
-                                width="100%" style="margin: auto; background-color:#F3F3F3;">
+                                width="100%" style="margin: auto; background-color:#F3F3F3; border: solid; border-color: #F3F3F3;">
                                 <tbody>
-                                    <tr style="border-style: solid; border-bottom: #000000;">
+<tr class="no-border">
+                                        <h3 style="text-align: left; font-size: 18px; padding-top: 7px; padding-bottom: 7px;"
+                                            class="buyersubs-pdf--block buyersubs-pdf--black">
+                                            Upfront Payment Option</h3>
+                                    </tr>
+                                    <tr>
                                         <th class="buyersubs-pdf--text-left buyersubs-pdf--black buyersubs-pdf__table-header"
                                             width="62%">Item</th>
                                         <th
-                                            class="buyersubs-pdf--text-right buyersubs-pdf--black buyersubs-pdf__table-header">
-                                            Quantity</th>
+                                            class="buyersubs-pdf--text-right buyersubs-pdf--black buyersubs-pdf__table-header"> </th>
                                         <th
                                             class="buyersubs-pdf--text-right buyersubs-pdf--black buyersubs-pdf__table-header">
                                             Total</th>
                                     </tr>
-                                    <tr class="no-border">
-                                        <td width="62%"
-                                            class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
-                                            Exporta Monthly Platform Access + Services</td>
-                                        <td
-                                            class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
-                                            5
+                                    <tr>
+                                        <td>
+                                            <hr class="solidline" width="125%">
+                                            </hr>
                                         </td>
-                                        <td
-                                            class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
-                                            $1495.00
+                                        <td>
+                                            <hr class="solidline" width="125%">
+                                            </hr>
                                         </td>
-                                    </tr>
-                                    <tr class="no-border">
-                                        <td width="62%"
-                                            class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
-                                            Lump sum payment discount</td>
-                                        <td
-                                            class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
-                                            
-                                        </td>
-                                        <td
-                                            class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
-                                            20%
+                                        <td>
+                                            <hr class="solidline" width="125%">
+                                            </hr>
                                         </td>
                                     </tr>
                                     <tr class="no-border">
                                         <td width="62%"
                                             class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
-                                            credit card fee (2.9% + $0.30)</td>
+                                            Exporta Platform Access + Services (Pre-Purchase Order) - Group Subscription Record's Subscription Record's months_of_service:formatted as 1,028.58 month(s)</td>
+                                        <td
+                                            class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black"></td>
+                                        <td
+                                            class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">Group Subscription Record's Subscription Record's months_of_service * Group Subscription Record's Subscription Record's Price:formatted as $1028.58</td>
+                                    </tr>
+                                    Group Subscription Record's Subscription Record's subscription_discount is 0:formatted as text
+                                    <tr class="no-border">
+                                        <td width="62%"
+                                            class="buyersubs-pdf--text-left buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
+                                            Credit Card Fee (2.9% + $0.30)</td>
                                         <td
                                             class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
                                             
                                         </td>
                                         <td
-                                            class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
-                                            $43.66
-                                        </td>
+                                            class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">Group Subscription Record's Subscription Record's subscription_discount is 0:formatted as text</td>
                                     </tr>
                                     <tr class="no-border">
                                         <td width="62%"
@@ -606,11 +599,11 @@
                                             <font style="color: #6f6f6f;">Exporta Monthly Platform Access Maintenance (Post-Purchase Order)</font></td>
                                         <td
                                             class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
-                                            <font style="color: #6f6f6f;">monthly</font>
+                                            <font style="color: #6f6f6f;"> </font>
                                         </td>
                                         <td
                                             class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--black">
-                                            <font style="color: #6f6f6f;">$19.99</font>
+                                            <font style="color: #6f6f6f;">Group Subscription Record's Subscription Record's maintenance_fee:formatted as $1028.58</font>
                                         </td>
                                     </tr>
                                     <tr>
@@ -636,18 +629,8 @@
                                         <td
                                             class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--orange">
                                             <b>
-                                                <font style="color: #f58845;">$1239.66</font>
+                                                <font style="color: #f58845;">Group Subscription Record's Subscription Record's subscription_discount is 0:formatted as text</font>
                                             </b>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th class="buyersubs-pdf--text-left buyersubs-pdf--black buyersubs-pdf__table-header"
-                                            width="62%"></th>
-                                        <td class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--orange">
-                                        </td>
-                                        <td
-                                            class="buyersubs-pdf--text-right buyersubs-pdf--text-pricing no-border buyersubs-pdf--orange">
-                                            <button class="button button1" onclick="location.href='https://exporta.io/dev_index/'"><b>Choose Lump sum</b></button>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -656,7 +639,6 @@
                         </table>
                     </td>
                     <!-- buyersubs Fees END -->
-                    </td>
                 </tr>
                 <!-- buyersubs Table END -->
             </tbody>
